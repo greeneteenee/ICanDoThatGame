@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ICanDoThatDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ActionItems">
+          <Key>
+            <PropertyRef Name="ActionID" />
+          </Key>
+          <Property Name="ActionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ActionDescription" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WhereItems">
+          <Key>
+            <PropertyRef Name="WhereID" />
+          </Key>
+          <Property Name="WhereID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WhereDescription" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WithItems">
+          <Key>
+            <PropertyRef Name="WithID" />
+          </Key>
+          <Property Name="WithID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WithDescription" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ICanDoThatDBModelStoreContainer">
+          <EntitySet Name="ActionItems" EntityType="Self.ActionItems" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WhereItems" EntityType="Self.WhereItems" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WithItems" EntityType="Self.WithItems" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ICanDoThatDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ActionItem">
+          <Key>
+            <PropertyRef Name="ActionID" />
+          </Key>
+          <Property Name="ActionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ActionDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WhereItem">
+          <Key>
+            <PropertyRef Name="WhereID" />
+          </Key>
+          <Property Name="WhereID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WhereDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WithItem">
+          <Key>
+            <PropertyRef Name="WithID" />
+          </Key>
+          <Property Name="WithID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WithDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="GameDB" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ActionItems" EntityType="Self.ActionItem" />
+          <EntitySet Name="WhereItems" EntityType="Self.WhereItem" />
+          <EntitySet Name="WithItems" EntityType="Self.WithItem" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ICanDoThatDBModelStoreContainer" CdmEntityContainer="GameDB">
+          <EntitySetMapping Name="ActionItems">
+            <EntityTypeMapping TypeName="ICanDoThatDBModel.ActionItem">
+              <MappingFragment StoreEntitySet="ActionItems">
+                <ScalarProperty Name="ActionID" ColumnName="ActionID" />
+                <ScalarProperty Name="ActionDescription" ColumnName="ActionDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WhereItems">
+            <EntityTypeMapping TypeName="ICanDoThatDBModel.WhereItem">
+              <MappingFragment StoreEntitySet="WhereItems">
+                <ScalarProperty Name="WhereID" ColumnName="WhereID" />
+                <ScalarProperty Name="WhereDescription" ColumnName="WhereDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WithItems">
+            <EntityTypeMapping TypeName="ICanDoThatDBModel.WithItem">
+              <MappingFragment StoreEntitySet="WithItems">
+                <ScalarProperty Name="WithID" ColumnName="WithID" />
+                <ScalarProperty Name="WithDescription" ColumnName="WithDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
