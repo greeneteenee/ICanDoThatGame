@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ICanDoThatGame
 {
-    public partial class Form1 : Form
+    public partial class CustomizeGameForm : Form
     {
-        public Form1()
+        public CustomizeGameForm()
         {
             InitializeComponent();
         }
