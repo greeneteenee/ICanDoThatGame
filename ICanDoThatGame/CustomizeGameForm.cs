@@ -16,5 +16,16 @@ namespace ICanDoThatGame
         {
             InitializeComponent();
         }
+
+        private void btnCustomize_Click(object sender, EventArgs e)
+        {
+            //create variables using form TextBox inputs
+            string action = txtActionItem.Text;
+            string place = txtWhereItem.Text;
+            string challenge = txtWithItem.Text;
+
+         
+
+        }
     }
 }
