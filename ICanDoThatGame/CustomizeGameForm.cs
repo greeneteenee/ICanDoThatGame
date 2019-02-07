@@ -24,8 +24,6 @@ namespace ICanDoThatGame
             string place = txtWhereItem.Text;
             string challenge = txtWithItem.Text;
 
-         
-
         }
     }
 }
