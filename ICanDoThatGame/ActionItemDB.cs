@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace ICanDoThatGame
 {
-    static class ActionItemDB
+    class ActionItemDB
     {
+        string item;
+
+        ActionItemDB(string item)
+        {
+            this.item = item;
+        }
+
         /// <summary>
         /// This method adds an action item to the Actionitems table (INSERT functionality)
         /// </summary>
