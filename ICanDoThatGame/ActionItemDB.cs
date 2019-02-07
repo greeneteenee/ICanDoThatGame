@@ -17,7 +17,6 @@ namespace ICanDoThatGame
             //database connection
             GameDB db = new GameDB();
 
-            //
             db.ActionItems.Add(item);
             db.SaveChanges();   
 
