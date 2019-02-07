@@ -59,6 +59,7 @@
       <DependentUpon>ICanDoThatDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ActionItemDB.cs" />
+    <Compile Include="ActionItemPartial.cs" />
     <Compile Include="CustomizeGameForm.cs">
       <SubType>Form</SubType>
     </Compile>
