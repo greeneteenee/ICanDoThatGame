@@ -89,6 +89,7 @@
     <Compile Include="WithItem.cs">
       <DependentUpon>ICanDoThatDBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="WithItemDB.cs" />
     <EmbeddedResource Include="CustomizeGameForm.resx">
       <DependentUpon>CustomizeGameForm.cs</DependentUpon>
     </EmbeddedResource>
