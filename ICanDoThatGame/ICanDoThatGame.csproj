@@ -85,6 +85,7 @@
     <Compile Include="WhereItem.cs">
       <DependentUpon>ICanDoThatDBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="WhereItemDB.cs" />
     <Compile Include="WithItem.cs">
       <DependentUpon>ICanDoThatDBModel.tt</DependentUpon>
     </Compile>
