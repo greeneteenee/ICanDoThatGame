@@ -16,7 +16,7 @@ namespace ICanDoThatGame
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CustomizeGameForm());
+            Application.Run(new GameForm());
         }
     }
 }
