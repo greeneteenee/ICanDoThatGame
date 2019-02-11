@@ -31,3 +31,36 @@ CREATE TABLE WithItems
 	,WithDescription varchar(50) NOT NULL
 )
 GO
+
+INSERT INTO ActionItems(ActionDescription)
+VALUES ('Crab walk')
+, ('Take giant steps')
+, ('Crawl')
+, ('Dance')
+, ('Skip')
+, ('Penguin walk')
+, ('Tip toe')
+, ('Hop');
+GO
+
+INSERT INTO WhereItems (WhereDescription)
+VALUES ('to the fridge')
+, ('to a sink and back')
+, ('to the front door and back')
+, ('to a bathtub')
+, ('to a book')
+, ('around a chair')
+, ('to a bedroom')
+, ('to a window');
+GO
+
+INSERT INTO WithItems (WithDescription)
+VALUES ('with a book in your hand!')
+, ('with a book on your head!')
+, ('with  a book inside your clothes!')
+, ('with a book under your left arm!')
+, ('with a book between your elbows!')
+, ('with a book under your chin!')
+, ('with a book between your knees!')
+, ('with a book under your right arm!');
+GO

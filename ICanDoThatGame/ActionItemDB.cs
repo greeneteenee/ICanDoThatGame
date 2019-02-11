@@ -21,9 +21,21 @@ namespace ICanDoThatGame
             GameDB db = new GameDB();
 
             db.ActionItems.Add(item);
+
             db.SaveChanges();
 
 
         }
+
+        public static string GetRandomAction()
+        {
+            //database connection
+            GameDB db = new GameDB();
+
+            //code random after getting all action items and putting them in a list
+            throw new NotImplementedException();
+
+        }
+
     }
 }
