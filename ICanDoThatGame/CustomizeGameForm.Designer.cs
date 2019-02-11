@@ -28,35 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtActionItem = new System.Windows.Forms.TextBox();
+            this.txtWhereItem = new System.Windows.Forms.TextBox();
+            this.txtWithItem = new System.Windows.Forms.TextBox();
             this.lblActionItem = new System.Windows.Forms.Label();
             this.lblWhereItem = new System.Windows.Forms.Label();
             this.lblWithItem = new System.Windows.Forms.Label();
             this.btnCustomize = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtActionItem
             // 
-            this.textBox1.Location = new System.Drawing.Point(57, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(202, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtActionItem.Location = new System.Drawing.Point(57, 40);
+            this.txtActionItem.Name = "txtActionItem";
+            this.txtActionItem.Size = new System.Drawing.Size(202, 20);
+            this.txtActionItem.TabIndex = 0;
             // 
-            // textBox2
+            // txtWhereItem
             // 
-            this.textBox2.Location = new System.Drawing.Point(57, 101);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(202, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtWhereItem.Location = new System.Drawing.Point(57, 101);
+            this.txtWhereItem.Name = "txtWhereItem";
+            this.txtWhereItem.Size = new System.Drawing.Size(202, 20);
+            this.txtWhereItem.TabIndex = 1;
             // 
-            // textBox3
+            // txtWithItem
             // 
-            this.textBox3.Location = new System.Drawing.Point(57, 162);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(202, 20);
-            this.textBox3.TabIndex = 2;
+            this.txtWithItem.Location = new System.Drawing.Point(57, 162);
+            this.txtWithItem.Name = "txtWithItem";
+            this.txtWithItem.Size = new System.Drawing.Size(202, 20);
+            this.txtWithItem.TabIndex = 2;
             // 
             // lblActionItem
             // 
@@ -93,6 +93,7 @@
             this.btnCustomize.TabIndex = 6;
             this.btnCustomize.Text = "Customize Game";
             this.btnCustomize.UseVisualStyleBackColor = true;
+            this.btnCustomize.Click += new System.EventHandler(this.btnCustomize_Click);
             // 
             // CustomizeGameForm
             // 
@@ -103,9 +104,9 @@
             this.Controls.Add(this.lblWithItem);
             this.Controls.Add(this.lblWhereItem);
             this.Controls.Add(this.lblActionItem);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtWithItem);
+            this.Controls.Add(this.txtWhereItem);
+            this.Controls.Add(this.txtActionItem);
             this.Name = "CustomizeGameForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -115,9 +116,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtActionItem;
+        private System.Windows.Forms.TextBox txtWhereItem;
+        private System.Windows.Forms.TextBox txtWithItem;
         private System.Windows.Forms.Label lblActionItem;
         private System.Windows.Forms.Label lblWhereItem;
         private System.Windows.Forms.Label lblWithItem;

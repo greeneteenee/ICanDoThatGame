@@ -16,5 +16,51 @@ namespace ICanDoThatGame
         {
             InitializeComponent();
         }
+
+        private void btnCustomize_Click(object sender, EventArgs e)
+        {
+            //create variables using form TextBox inputs
+            string action = txtActionItem.Text;
+            string place = txtWhereItem.Text;
+            string challenge = txtWithItem.Text;
+
+            //to test add addAction code
+            //ActionItem addAction = new ActionItem();
+            //addAction.ActionDescription = "test1";   
+                    
+            //if txtActionTtem TextBox is not empty, add new Action to database
+            if (!String.IsNullOrEmpty(action))
+            {
+                ActionItem addAction = new ActionItem(action);
+                addAction.ActionDescription = action;
+
+                ActionItemDB.AddActionItem(addAction);
+                MessageBox.Show("Action added successfully");
+
+            }
+
+            //if txtWhereItem TextBox is not empty, add new Where item to database
+            if (!String.IsNullOrEmpty(place))
+            {
+                WhereItem addWhere = new WhereItem(place);
+                addWhere.WhereDescription = place;
+
+                WhereItemDB.AddWhereItem(addWhere);
+                MessageBox.Show("Place added successfully");
+
+            }
+
+            //if txtWithItem TextBox is not empty, add new With item to database
+            if (!String.IsNullOrEmpty(place))
+            {
+                WithItem addWith = new WithItem(challenge);
+                addWith.WithDescription = challenge;
+
+                WithItemDB.AddWithItem(addWith);
+                MessageBox.Show("Challenge added successfully");
+
+            }
+
+        }
     }
 }
