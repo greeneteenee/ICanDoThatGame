@@ -13,6 +13,9 @@ namespace ICanDoThatGame
     {
         private string action;
 
+        //no arg constructor
+        public ActionItem() {}
+
         public ActionItem(string action)
         {
             this.action = action;

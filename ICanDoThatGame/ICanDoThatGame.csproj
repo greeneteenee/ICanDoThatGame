@@ -142,6 +142,12 @@
     <Compile Include="CustomizeGameForm.Designer.cs">
       <DependentUpon>CustomizeGameForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameForm.Designer.cs">
+      <DependentUpon>GameForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ICanDoThatDBModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -171,6 +177,9 @@
     <Compile Include="WithItemPartial.cs" />
     <EmbeddedResource Include="CustomizeGameForm.resx">
       <DependentUpon>CustomizeGameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameForm.resx">
+      <DependentUpon>GameForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
