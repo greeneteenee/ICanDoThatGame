@@ -28,7 +28,7 @@ namespace ICanDoThatGame
             //ActionItem addAction = new ActionItem();
             //addAction.ActionDescription = "test1";   
                     
-            //if "insert new action" textBox is not empty, add new Action to database
+            //if txtActionTtem TextBox is not empty, add new Action to database
             if (!String.IsNullOrEmpty(action))
             {
                 ActionItem addAction = new ActionItem(action);
@@ -36,6 +36,17 @@ namespace ICanDoThatGame
 
                 ActionItemDB.AddActionItem(addAction);
                 MessageBox.Show("Action added successfully");
+
+            }
+
+            //if txtWhereItem TextBox is not empty, add new Where item to database
+            if (!String.IsNullOrEmpty(place))
+            {
+                WhereItem addWhere = new WhereItem(place);
+                addWhere.WhereDescription = place;
+
+                WhereItemDB.AddWhereItem(addWhere);
+                MessageBox.Show("Place added successfully");
 
             }
         }
