@@ -168,6 +168,7 @@
       <DependentUpon>ICanDoThatDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="WithItemDB.cs" />
+    <Compile Include="WithItemPartial.cs" />
     <EmbeddedResource Include="CustomizeGameForm.resx">
       <DependentUpon>CustomizeGameForm.cs</DependentUpon>
     </EmbeddedResource>

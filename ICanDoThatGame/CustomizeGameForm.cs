@@ -49,6 +49,18 @@ namespace ICanDoThatGame
                 MessageBox.Show("Place added successfully");
 
             }
+
+            //if txtWithItem TextBox is not empty, add new With item to database
+            if (!String.IsNullOrEmpty(place))
+            {
+                WithItem addWith = new WithItem(challenge);
+                addWith.WithDescription = challenge;
+
+                WithItemDB.AddWithItem(addWith);
+                MessageBox.Show("Challenge added successfully");
+
+            }
+
         }
     }
 }
