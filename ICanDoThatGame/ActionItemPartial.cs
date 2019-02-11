@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace ICanDoThatGame
 {
-   
+    using System;
+    using System.Collections.Generic;
+
     public partial class ActionItem
     {
+        private string action;
 
-        public string item;
-
-        public ActionItem(string item)
+        public ActionItem(string action)
         {
-            this.item = item;
+            this.action = action;
         }
-
 
     }
 }

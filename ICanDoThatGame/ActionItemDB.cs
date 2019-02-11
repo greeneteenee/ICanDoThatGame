@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,11 +16,13 @@ namespace ICanDoThatGame
         /// <param name="item"></param>
         public static void AddActionItem(ActionItem item)
         {
+
             //database connection
             GameDB db = new GameDB();
 
             db.ActionItems.Add(item);
-            db.SaveChanges();   
+            db.SaveChanges();
+
 
         }
     }

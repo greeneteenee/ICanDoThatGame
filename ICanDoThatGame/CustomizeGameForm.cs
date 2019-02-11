@@ -24,8 +24,20 @@ namespace ICanDoThatGame
             string place = txtWhereItem.Text;
             string challenge = txtWithItem.Text;
 
-            ActionItem addAction = new ActionItem(action);
+            //to test add addAction code
+            //ActionItem addAction = new ActionItem();
+            //addAction.ActionDescription = "test1";   
+                    
+            //if "insert new action" textBox is not empty, add new Action to database
+            if (!String.IsNullOrEmpty(action))
+            {
+                ActionItem addAction = new ActionItem(action);
+                addAction.ActionDescription = action;
 
+                ActionItemDB.AddActionItem(addAction);
+                MessageBox.Show("Action added successfully");
+
+            }
         }
     }
 }
