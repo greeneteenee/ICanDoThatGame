@@ -32,6 +32,9 @@
             this.btnWhere = new System.Windows.Forms.Button();
             this.btnWith = new System.Windows.Forms.Button();
             this.btnOpenCustomizeForm = new System.Windows.Forms.Button();
+            this.panelAction = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelWhere = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelWith = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // btnAction
@@ -74,11 +77,41 @@
             this.btnOpenCustomizeForm.UseVisualStyleBackColor = true;
             this.btnOpenCustomizeForm.Click += new System.EventHandler(this.btnOpenCustomizeForm_Click);
             // 
+            // panelAction
+            // 
+            this.panelAction.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panelAction.Location = new System.Drawing.Point(37, 163);
+            this.panelAction.Name = "panelAction";
+            this.panelAction.Size = new System.Drawing.Size(182, 100);
+            this.panelAction.TabIndex = 4;
+            this.panelAction.Visible = false;
+            // 
+            // panelWhere
+            // 
+            this.panelWhere.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panelWhere.Location = new System.Drawing.Point(260, 163);
+            this.panelWhere.Name = "panelWhere";
+            this.panelWhere.Size = new System.Drawing.Size(182, 100);
+            this.panelWhere.TabIndex = 5;
+            this.panelWhere.Visible = false;
+            // 
+            // panelWith
+            // 
+            this.panelWith.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panelWith.Location = new System.Drawing.Point(486, 163);
+            this.panelWith.Name = "panelWith";
+            this.panelWith.Size = new System.Drawing.Size(182, 100);
+            this.panelWith.TabIndex = 6;
+            this.panelWith.Visible = false;
+            // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(712, 450);
+            this.Controls.Add(this.panelWith);
+            this.Controls.Add(this.panelWhere);
+            this.Controls.Add(this.panelAction);
             this.Controls.Add(this.btnOpenCustomizeForm);
             this.Controls.Add(this.btnWith);
             this.Controls.Add(this.btnWhere);
@@ -95,5 +128,8 @@
         private System.Windows.Forms.Button btnWhere;
         private System.Windows.Forms.Button btnWith;
         private System.Windows.Forms.Button btnOpenCustomizeForm;
+        private System.Windows.Forms.FlowLayoutPanel panelAction;
+        private System.Windows.Forms.FlowLayoutPanel panelWhere;
+        private System.Windows.Forms.FlowLayoutPanel panelWith;
     }
 }

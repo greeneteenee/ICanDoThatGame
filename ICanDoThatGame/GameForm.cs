@@ -22,6 +22,7 @@ namespace ICanDoThatGame
     
             string randomAction = ActionItemDB.GetRandomAction();
             MessageBox.Show(randomAction);
+            panelAction.Visible = true;
         
         }
 
@@ -29,12 +30,14 @@ namespace ICanDoThatGame
         {
             string randomWhere = WhereItemDB.GetRandomWhere();
             MessageBox.Show(randomWhere);
+            panelWhere.Visible = true;
         }
 
         private void btnWith_Click(object sender, EventArgs e)
         {
             string randomWith = WithItemDB.GetRandomWith();
             MessageBox.Show(randomWith);
+            panelWith.Visible = true;
         }
 
         /// <summary>
