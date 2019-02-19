@@ -32,6 +32,15 @@
             this.btnWhere = new System.Windows.Forms.Button();
             this.btnWith = new System.Windows.Forms.Button();
             this.btnOpenCustomizeForm = new System.Windows.Forms.Button();
+            this.panelAction = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblAction = new System.Windows.Forms.Label();
+            this.panelWhere = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblWhere = new System.Windows.Forms.Label();
+            this.panelWith = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblWith = new System.Windows.Forms.Label();
+            this.panelAction.SuspendLayout();
+            this.panelWhere.SuspendLayout();
+            this.panelWith.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAction
@@ -74,17 +83,80 @@
             this.btnOpenCustomizeForm.UseVisualStyleBackColor = true;
             this.btnOpenCustomizeForm.Click += new System.EventHandler(this.btnOpenCustomizeForm_Click);
             // 
+            // panelAction
+            // 
+            this.panelAction.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panelAction.Controls.Add(this.lblAction);
+            this.panelAction.Location = new System.Drawing.Point(37, 163);
+            this.panelAction.Name = "panelAction";
+            this.panelAction.Size = new System.Drawing.Size(182, 100);
+            this.panelAction.TabIndex = 4;
+            this.panelAction.Visible = false;
+            // 
+            // lblAction
+            // 
+            this.lblAction.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblAction.Location = new System.Drawing.Point(3, 0);
+            this.lblAction.Name = "lblAction";
+            this.lblAction.Size = new System.Drawing.Size(179, 100);
+            this.lblAction.TabIndex = 0;
+            this.lblAction.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panelWhere
+            // 
+            this.panelWhere.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panelWhere.Controls.Add(this.lblWhere);
+            this.panelWhere.Location = new System.Drawing.Point(260, 163);
+            this.panelWhere.Name = "panelWhere";
+            this.panelWhere.Size = new System.Drawing.Size(182, 100);
+            this.panelWhere.TabIndex = 5;
+            this.panelWhere.Visible = false;
+            // 
+            // lblWhere
+            // 
+            this.lblWhere.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblWhere.Location = new System.Drawing.Point(3, 0);
+            this.lblWhere.Name = "lblWhere";
+            this.lblWhere.Size = new System.Drawing.Size(179, 100);
+            this.lblWhere.TabIndex = 1;
+            this.lblWhere.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panelWith
+            // 
+            this.panelWith.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panelWith.Controls.Add(this.lblWith);
+            this.panelWith.Location = new System.Drawing.Point(486, 163);
+            this.panelWith.Name = "panelWith";
+            this.panelWith.Size = new System.Drawing.Size(182, 100);
+            this.panelWith.TabIndex = 6;
+            this.panelWith.Visible = false;
+            // 
+            // lblWith
+            // 
+            this.lblWith.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblWith.Location = new System.Drawing.Point(3, 0);
+            this.lblWith.Name = "lblWith";
+            this.lblWith.Size = new System.Drawing.Size(178, 100);
+            this.lblWith.TabIndex = 1;
+            this.lblWith.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(712, 450);
+            this.Controls.Add(this.panelWith);
+            this.Controls.Add(this.panelWhere);
+            this.Controls.Add(this.panelAction);
             this.Controls.Add(this.btnOpenCustomizeForm);
             this.Controls.Add(this.btnWith);
             this.Controls.Add(this.btnWhere);
             this.Controls.Add(this.btnAction);
             this.Name = "GameForm";
             this.Text = "GameForm";
+            this.panelAction.ResumeLayout(false);
+            this.panelWhere.ResumeLayout(false);
+            this.panelWith.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -95,5 +167,11 @@
         private System.Windows.Forms.Button btnWhere;
         private System.Windows.Forms.Button btnWith;
         private System.Windows.Forms.Button btnOpenCustomizeForm;
+        private System.Windows.Forms.FlowLayoutPanel panelAction;
+        private System.Windows.Forms.FlowLayoutPanel panelWhere;
+        private System.Windows.Forms.FlowLayoutPanel panelWith;
+        private System.Windows.Forms.Label lblAction;
+        private System.Windows.Forms.Label lblWhere;
+        private System.Windows.Forms.Label lblWith;
     }
 }
