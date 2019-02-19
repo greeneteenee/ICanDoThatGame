@@ -62,6 +62,7 @@
             this.btnWith.TabIndex = 2;
             this.btnWith.Text = "Challenge";
             this.btnWith.UseVisualStyleBackColor = true;
+            this.btnWith.Click += new System.EventHandler(this.btnWith_Click);
             // 
             // btnOpenCustomizeForm
             // 
