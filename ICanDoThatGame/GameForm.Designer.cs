@@ -52,6 +52,7 @@
             this.btnWhere.TabIndex = 1;
             this.btnWhere.Text = "Place";
             this.btnWhere.UseVisualStyleBackColor = true;
+            this.btnWhere.Click += new System.EventHandler(this.btnWhere_Click);
             // 
             // btnWith
             // 
