@@ -25,6 +25,12 @@ namespace ICanDoThatGame
         
         }
 
+        private void btnWhere_Click(object sender, EventArgs e)
+        {
+            string randomWhere = WhereItemDB.GetRandomWhere();
+            MessageBox.Show(randomWhere);
+        }
+
         /// <summary>
         /// This method opens the CustomizeGameForm when the "Customize Form" button is clicked
         /// </summary>
@@ -35,5 +41,7 @@ namespace ICanDoThatGame
             CustomizeGameForm customizeForm = new CustomizeGameForm();
             customizeForm.Show();
         }
+
+       
     }
 }

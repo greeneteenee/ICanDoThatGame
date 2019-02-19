@@ -13,6 +13,9 @@ namespace ICanDoThatGame
     {
         private string place;
 
+        //no arg constructor
+        public WhereItem() { }
+
         public WhereItem(string place)
         {
             this.place = place;
