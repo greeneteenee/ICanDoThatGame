@@ -31,6 +31,12 @@ namespace ICanDoThatGame
             MessageBox.Show(randomWhere);
         }
 
+        private void btnWith_Click(object sender, EventArgs e)
+        {
+            string randomWith = WithItemDB.GetRandomWith();
+            MessageBox.Show(randomWith);
+        }
+
         /// <summary>
         /// This method opens the CustomizeGameForm when the "Customize Form" button is clicked
         /// </summary>
@@ -42,6 +48,6 @@ namespace ICanDoThatGame
             customizeForm.Show();
         }
 
-       
+      
     }
 }

@@ -13,6 +13,9 @@ namespace ICanDoThatGame
     {
         private string challenge;
 
+        //no arg constructor
+        public WithItem() { }
+
         public WithItem(string challenge)
         {
             this.challenge = challenge;

@@ -42,7 +42,7 @@ namespace ICanDoThatGame
             //database connection
             GameDB db = new GameDB();
 
-            //get random ActionItem description from list of Actionitems
+            //get random WhereItem description from list of Whereitems
             Random rand = new Random();
             List<WhereItem> allWhereItems = GetWhereItems();
             string randomWhere = (allWhereItems[rand.Next(allWhereItems.Count)]).WhereDescription.ToString();
