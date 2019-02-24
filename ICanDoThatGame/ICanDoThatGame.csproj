@@ -189,6 +189,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="ICanDoThatDBModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -222,6 +223,8 @@
       <DependentUpon>ICanDoThatDBModel.edmx</DependentUpon>
       <LastGenOutput>ICanDoThatDBModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\cover-98637_1280_red.png" />
+    <None Include="Resources\cover-98637_1280.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
