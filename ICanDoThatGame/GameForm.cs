@@ -54,6 +54,68 @@ namespace ICanDoThatGame
             customizeForm.Show();
         }
 
-      
+        /// <summary>
+        /// This method increases player 1 score by one point when label is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void p1ScoreLabel_Click(object sender, EventArgs e)
+        {
+            p1ScoreLabel.Text = (Int32.Parse(p1ScoreLabel.Text) + 1).ToString();
+            
+        }
+
+        /// <summary>
+        /// This method increases player 2 score by one point when label is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void p2ScoreLabel_Click(object sender, EventArgs e)
+        {
+            p2ScoreLabel.Text = (Int32.Parse(p2ScoreLabel.Text)+1).ToString();
+        }
+
+        /// <summary>
+        /// This method asks player 1 if they want to descrease the score by one point (i.e. undo point increase) if label is right-clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void p1ScoreLabel_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                DialogResult dialogResult = MessageBox.Show("Do you want to undo point?", "Undo?", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    p1ScoreLabel.Text = (Int32.Parse(p1ScoreLabel.Text) - 1).ToString();
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    //do nothing
+                }
+            }
+        }
+
+   
+        /// <summary>
+        /// This method asks player 2 if they want to descrease the score by one point (i.e. undo point increase) if label is right-clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void p2ScoreLabel_MouseUp_1(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                DialogResult dialogResult = MessageBox.Show("Do you want to undo point?", "Undo?", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    p2ScoreLabel.Text = (Int32.Parse(p2ScoreLabel.Text) - 1).ToString();
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    //do nothing
+                }
+            }
+        }
     }
 }
