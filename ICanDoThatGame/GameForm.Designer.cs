@@ -175,6 +175,7 @@
             this.p1ScoreLabel.TabIndex = 11;
             this.p1ScoreLabel.Text = "0";
             this.p1ScoreLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p1ScoreLabel.Click += new System.EventHandler(this.p1ScoreLabel_Click);
             // 
             // p2Picture
             // 
@@ -212,6 +213,7 @@
             this.p2ScoreLabel.TabIndex = 12;
             this.p2ScoreLabel.Text = "0";
             this.p2ScoreLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.p2ScoreLabel.Click += new System.EventHandler(this.p2ScoreLabel_Click);
             // 
             // p2Panel
             // 
