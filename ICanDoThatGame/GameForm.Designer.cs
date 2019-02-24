@@ -176,6 +176,7 @@
             this.p1ScoreLabel.Text = "0";
             this.p1ScoreLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.p1ScoreLabel.Click += new System.EventHandler(this.p1ScoreLabel_Click);
+            this.p1ScoreLabel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.p1ScoreLabel_MouseUp);
             // 
             // p2Picture
             // 
@@ -214,6 +215,7 @@
             this.p2ScoreLabel.Text = "0";
             this.p2ScoreLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.p2ScoreLabel.Click += new System.EventHandler(this.p2ScoreLabel_Click);
+            this.p2ScoreLabel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.p2ScoreLabel_MouseUp_1);
             // 
             // p2Panel
             // 
