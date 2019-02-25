@@ -56,7 +56,7 @@
             // btnAction
             // 
             this.btnAction.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAction.Font = new System.Drawing.Font("AR CARTER", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAction.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAction.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnAction.Location = new System.Drawing.Point(224, 63);
             this.btnAction.Name = "btnAction";
@@ -69,7 +69,7 @@
             // btnWhere
             // 
             this.btnWhere.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnWhere.Font = new System.Drawing.Font("AR CARTER", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWhere.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnWhere.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnWhere.Location = new System.Drawing.Point(447, 63);
             this.btnWhere.Name = "btnWhere";
@@ -82,7 +82,7 @@
             // btnWith
             // 
             this.btnWith.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnWith.Font = new System.Drawing.Font("AR CARTER", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWith.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnWith.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnWith.Location = new System.Drawing.Point(673, 63);
             this.btnWith.Name = "btnWith";
@@ -94,7 +94,7 @@
             // 
             // btnOpenCustomizeForm
             // 
-            this.btnOpenCustomizeForm.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpenCustomizeForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOpenCustomizeForm.Location = new System.Drawing.Point(880, 407);
             this.btnOpenCustomizeForm.Name = "btnOpenCustomizeForm";
             this.btnOpenCustomizeForm.Size = new System.Drawing.Size(181, 31);
@@ -116,7 +116,7 @@
             // lblAction
             // 
             this.lblAction.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblAction.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAction.Font = new System.Drawing.Font("Papyrus", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAction.Location = new System.Drawing.Point(3, 0);
             this.lblAction.Name = "lblAction";
             this.lblAction.Size = new System.Drawing.Size(179, 100);
@@ -136,7 +136,7 @@
             // lblWhere
             // 
             this.lblWhere.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblWhere.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWhere.Font = new System.Drawing.Font("Papyrus", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWhere.Location = new System.Drawing.Point(3, 0);
             this.lblWhere.Name = "lblWhere";
             this.lblWhere.Size = new System.Drawing.Size(179, 100);
@@ -156,7 +156,7 @@
             // lblWith
             // 
             this.lblWith.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblWith.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWith.Font = new System.Drawing.Font("Papyrus", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWith.Location = new System.Drawing.Point(3, 0);
             this.lblWith.Name = "lblWith";
             this.lblWith.Size = new System.Drawing.Size(178, 100);

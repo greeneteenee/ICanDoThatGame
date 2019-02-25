@@ -163,6 +163,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ICanDoThatDBModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WhereItem.cs">
