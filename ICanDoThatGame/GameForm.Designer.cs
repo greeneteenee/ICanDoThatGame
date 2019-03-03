@@ -64,6 +64,7 @@
             this.btnAction.Size = new System.Drawing.Size(182, 97);
             this.btnAction.TabIndex = 0;
             this.btnAction.Text = "Action";
+            this.btnAction.UseCompatibleTextRendering = true;
             this.btnAction.UseVisualStyleBackColor = false;
             this.btnAction.Click += new System.EventHandler(this.btnAction_Click);
             // 
@@ -77,6 +78,7 @@
             this.btnWhere.Size = new System.Drawing.Size(182, 97);
             this.btnWhere.TabIndex = 1;
             this.btnWhere.Text = "Place";
+            this.btnWhere.UseCompatibleTextRendering = true;
             this.btnWhere.UseVisualStyleBackColor = false;
             this.btnWhere.Click += new System.EventHandler(this.btnWhere_Click);
             // 
@@ -90,6 +92,7 @@
             this.btnWith.Size = new System.Drawing.Size(182, 97);
             this.btnWith.TabIndex = 2;
             this.btnWith.Text = "Challenge";
+            this.btnWith.UseCompatibleTextRendering = true;
             this.btnWith.UseVisualStyleBackColor = false;
             this.btnWith.Click += new System.EventHandler(this.btnWith_Click);
             // 
@@ -297,6 +300,7 @@
             this.Controls.Add(this.p1Panel);
             this.Name = "GameForm";
             this.Text = "GameForm";
+            this.Load += new System.EventHandler(this.GameForm_Load);
             this.panelAction.ResumeLayout(false);
             this.panelWhere.ResumeLayout(false);
             this.panelWith.ResumeLayout(false);
