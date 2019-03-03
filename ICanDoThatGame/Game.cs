@@ -11,12 +11,23 @@ namespace ICanDoThatGame
     {
     
 
-        public void ChangeTurn(bool turn, Player currPlayer)
+        public bool ChangeTurn(bool turn, Player currPlayer)
         {
             DialogResult dialogResult = MessageBox.Show($"Was {currPlayer.PlayerName} successful?", "", MessageBoxButtons.YesNo);
-            turn = !turn;
+            if (dialogResult == DialogResult.Yes)
+            {
+                currPlayer.UpdatePlayerScore(currPlayer);
+                //MessageBox.Show(currPlayer.PlayerScore.ToString());
+                
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do nothing
+            }
+            return turn = !turn;
+
         }
 
-      
+
     }
 }

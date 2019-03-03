@@ -12,9 +12,9 @@ namespace ICanDoThatGame
         public int PlayerScore { get; private set; } = 0;
 
         
-        public int UpdatePlayerScore(int score)
+        public void UpdatePlayerScore(Player currPlayer)
         {
-            return score + 1;
+            currPlayer.PlayerScore += 1;
         }
 
     }

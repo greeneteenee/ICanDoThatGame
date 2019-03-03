@@ -17,10 +17,15 @@ namespace ICanDoThatGame
             InitializeComponent();
         }
 
-        Game newGame = new Game();
+        Game thisGame = new Game();
+        Player player1 = new Player();
+        Player player2 = new Player();
+        Player currPlayer = null;
+        //player1 turn
+        bool turn;
+        
 
-
-        private void btnAction_Click(object sender, EventArgs e)
+        public void btnAction_Click(object sender, EventArgs e)
         {
     
             string randomAction = ActionItemDB.GetRandomAction();
@@ -30,7 +35,8 @@ namespace ICanDoThatGame
             btnAction.Enabled = false;
             if(CheckEnabled() == true)
             {
-                throw new NotImplementedException();
+                turn = thisGame.ChangeTurn(turn, currPlayer);
+                PlayerTurn(turn);
             }
         
         }
@@ -42,6 +48,11 @@ namespace ICanDoThatGame
             //MessageBox.Show(randomWhere);
             panelWhere.Visible = true;
             btnWhere.Enabled = false;
+            if (CheckEnabled() == true)
+            {
+                turn = thisGame.ChangeTurn(turn, currPlayer);
+                PlayerTurn(turn);
+            }
         }
 
         private void btnWith_Click(object sender, EventArgs e)
@@ -51,6 +62,11 @@ namespace ICanDoThatGame
             //MessageBox.Show(randomWith);
             panelWith.Visible = true;
             btnWith.Enabled = false;
+            if (CheckEnabled() == true)
+            {
+                turn = thisGame.ChangeTurn(turn, currPlayer);          
+                PlayerTurn(turn);
+            }
         }
 
         /// <summary>
@@ -69,42 +85,42 @@ namespace ICanDoThatGame
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void p1ScoreLabel_Click(object sender, EventArgs e)
-        {
-            p1ScoreLabel.Text = (Int32.Parse(p1ScoreLabel.Text) + 1).ToString();
+        //private void p1ScoreLabel_Click(object sender, EventArgs e)
+        //{
+        //    p1ScoreLabel.Text = (Int32.Parse(p1ScoreLabel.Text) + 1).ToString();
             
-        }
+        //}
 
         /// <summary>
         /// This method increases player 2 score by one point when label is clicked
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void p2ScoreLabel_Click(object sender, EventArgs e)
-        {
-            p2ScoreLabel.Text = (Int32.Parse(p2ScoreLabel.Text)+1).ToString();
-        }
+        //private void p2ScoreLabel_Click(object sender, EventArgs e)
+        //{
+        //    p2ScoreLabel.Text = (Int32.Parse(p2ScoreLabel.Text)+1).ToString();
+        //}
 
         /// <summary>
         /// This method asks player 1 if they want to descrease the score by one point (i.e. undo point increase) if label is right-clicked
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void p1ScoreLabel_MouseUp(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-            {
-                DialogResult dialogResult = MessageBox.Show("Do you want to undo point?", "Undo?", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    p1ScoreLabel.Text = (Int32.Parse(p1ScoreLabel.Text) - 1).ToString();
-                }
-                else if (dialogResult == DialogResult.No)
-                {
-                    //do nothing
-                }
-            }
-        }
+        //private void p1ScoreLabel_MouseUp(object sender, MouseEventArgs e)
+        //{
+        //    if (e.Button == MouseButtons.Right)
+        //    {
+        //        DialogResult dialogResult = MessageBox.Show("Do you want to undo point?", "Undo?", MessageBoxButtons.YesNo);
+        //        if (dialogResult == DialogResult.Yes)
+        //        {
+        //            p1ScoreLabel.Text = (Int32.Parse(p1ScoreLabel.Text) - 1).ToString();
+        //        }
+        //        else if (dialogResult == DialogResult.No)
+        //        {
+        //            //do nothing
+        //        }
+        //    }
+        //}
 
    
         /// <summary>
@@ -112,35 +128,47 @@ namespace ICanDoThatGame
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void p2ScoreLabel_MouseUp_1(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-            {
-                DialogResult dialogResult = MessageBox.Show("Do you want to undo point?", "Undo?", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    p2ScoreLabel.Text = (Int32.Parse(p2ScoreLabel.Text) - 1).ToString();
-                }
-                else if (dialogResult == DialogResult.No)
-                {
-                    //do nothing
-                }
-            }
-        }
+        //private void p2ScoreLabel_MouseUp_1(object sender, MouseEventArgs e)
+        //{
+        //    if (e.Button == MouseButtons.Right)
+        //    {
+        //        DialogResult dialogResult = MessageBox.Show("Do you want to undo point?", "Undo?", MessageBoxButtons.YesNo);
+        //        if (dialogResult == DialogResult.Yes)
+        //        {
+        //            p2ScoreLabel.Text = (Int32.Parse(p2ScoreLabel.Text) - 1).ToString();
+        //        }
+        //        else if (dialogResult == DialogResult.No)
+        //        {
+        //            //do nothing
+        //        }
+        //    }
+        //}
 
         private void btnStartGame_Click(object sender, EventArgs e)
         {
             btnStartGame.Visible = false;
-            Player player1 = new Player();
             player1.PlayerName = "Thing 1";
-            Player player2 = new Player();
             player2.PlayerName = "Thing 2";
-            Player currPlayer = null;
+            p1ScoreLabel.Text = player1.PlayerScore.ToString();
+            p2ScoreLabel.Text = player2.PlayerScore.ToString();
 
+            turn = false;
+            
+            PlayerTurn(turn);
+        }
 
-            //player1 turn
-            bool turn = false;
-            if(turn == false)
+        public void PlayerTurn(bool turn)
+        {
+            p1ScoreLabel.Text = player1.PlayerScore.ToString();
+            p2ScoreLabel.Text = player2.PlayerScore.ToString();
+            btnAction.Enabled = true;
+            btnWhere.Enabled = true;
+            btnWith.Enabled = true;
+            panelAction.Visible = false;
+            panelWhere.Visible = false;
+            panelWith.Visible = false;
+
+            if (turn == false)
             {
                 currPlayer = player1;
             }
@@ -148,24 +176,21 @@ namespace ICanDoThatGame
             {
                 currPlayer = player2;
             }
-            
-
-            PlayerTurn(turn, currPlayer);
-        }
-
-        public void PlayerTurn(bool turn, Player currPlayer)
-        {
-
-            
-
 
             //if it is player1's turn, highlight player
             if (turn == false)
             {
                 p1Panel.Visible = true;
-                //newGame.ChangeTurn(turn);
+                p2Panel.Visible = false;
                
             }
+            else
+            {
+                p1Panel.Visible = false;
+                p2Panel.Visible = true;
+            }
+           
+
 
         }
 
