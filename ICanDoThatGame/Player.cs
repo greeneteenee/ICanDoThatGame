@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ICanDoThatGame
 {
-    class Player
+    public class Player
     {
         public string PlayerName { get; set; }
-        public int PlayerScore { get; private set; }
+        public int PlayerScore { get; private set; } = 0;
 
         
         public int UpdatePlayerScore(int score)
