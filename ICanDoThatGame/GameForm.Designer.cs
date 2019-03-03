@@ -46,6 +46,7 @@
             this.p1NameTextBox = new System.Windows.Forms.TextBox();
             this.p1Picture = new System.Windows.Forms.PictureBox();
             this.p1Panel = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnStartGame = new System.Windows.Forms.Button();
             this.panelAction.SuspendLayout();
             this.panelWhere.SuspendLayout();
             this.panelWith.SuspendLayout();
@@ -193,7 +194,7 @@
             this.p2NameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.p2NameTextBox.Enabled = false;
             this.p2NameTextBox.Font = new System.Drawing.Font("Papyrus", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.p2NameTextBox.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.p2NameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.p2NameTextBox.Location = new System.Drawing.Point(917, 154);
             this.p2NameTextBox.Multiline = true;
             this.p2NameTextBox.Name = "p2NameTextBox";
@@ -232,7 +233,7 @@
             this.p1NameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.p1NameTextBox.Enabled = false;
             this.p1NameTextBox.Font = new System.Drawing.Font("Papyrus", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.p1NameTextBox.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.p1NameTextBox.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.p1NameTextBox.Location = new System.Drawing.Point(62, 154);
             this.p1NameTextBox.Multiline = true;
             this.p1NameTextBox.Name = "p1NameTextBox";
@@ -261,11 +262,24 @@
             this.p1Panel.TabIndex = 14;
             this.p1Panel.Visible = false;
             // 
+            // btnStartGame
+            // 
+            this.btnStartGame.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnStartGame.Font = new System.Drawing.Font("Rockwell Condensed", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStartGame.Location = new System.Drawing.Point(225, 58);
+            this.btnStartGame.Name = "btnStartGame";
+            this.btnStartGame.Size = new System.Drawing.Size(629, 222);
+            this.btnStartGame.TabIndex = 15;
+            this.btnStartGame.Text = "START GAME";
+            this.btnStartGame.UseVisualStyleBackColor = false;
+            this.btnStartGame.Click += new System.EventHandler(this.btnStartGame_Click);
+            // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1070, 450);
+            this.Controls.Add(this.btnStartGame);
             this.Controls.Add(this.p2ScoreLabel);
             this.Controls.Add(this.p1ScoreLabel);
             this.Controls.Add(this.p2NameTextBox);
@@ -313,5 +327,6 @@
         private System.Windows.Forms.TextBox p1NameTextBox;
         private System.Windows.Forms.PictureBox p1Picture;
         private System.Windows.Forms.FlowLayoutPanel p1Panel;
+        private System.Windows.Forms.Button btnStartGame;
     }
 }

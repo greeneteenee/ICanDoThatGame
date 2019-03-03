@@ -17,6 +17,9 @@ namespace ICanDoThatGame
             InitializeComponent();
         }
 
+        Game newGame = new Game();
+
+
         private void btnAction_Click(object sender, EventArgs e)
         {
     
@@ -24,6 +27,11 @@ namespace ICanDoThatGame
             lblAction.Text = randomAction;
             //MessageBox.Show(randomAction);
             panelAction.Visible = true;
+            btnAction.Enabled = false;
+            if(CheckEnabled() == true)
+            {
+                throw new NotImplementedException();
+            }
         
         }
 
@@ -33,6 +41,7 @@ namespace ICanDoThatGame
             lblWhere.Text = randomWhere;
             //MessageBox.Show(randomWhere);
             panelWhere.Visible = true;
+            btnWhere.Enabled = false;
         }
 
         private void btnWith_Click(object sender, EventArgs e)
@@ -41,6 +50,7 @@ namespace ICanDoThatGame
             lblWith.Text = randomWith;
             //MessageBox.Show(randomWith);
             panelWith.Visible = true;
+            btnWith.Enabled = false;
         }
 
         /// <summary>
@@ -116,6 +126,56 @@ namespace ICanDoThatGame
                     //do nothing
                 }
             }
+        }
+
+        private void btnStartGame_Click(object sender, EventArgs e)
+        {
+            btnStartGame.Visible = false;
+            Player player1 = new Player();
+            player1.PlayerName = "Thing 1";
+            Player player2 = new Player();
+            player2.PlayerName = "Thing 2";
+            Player currPlayer = null;
+
+
+            //player1 turn
+            bool turn = false;
+            if(turn == false)
+            {
+                currPlayer = player1;
+            }
+            else
+            {
+                currPlayer = player2;
+            }
+            
+
+            PlayerTurn(turn, currPlayer);
+        }
+
+        public void PlayerTurn(bool turn, Player currPlayer)
+        {
+
+            
+
+
+            //if it is player1's turn, highlight player
+            if (turn == false)
+            {
+                p1Panel.Visible = true;
+                //newGame.ChangeTurn(turn);
+               
+            }
+
+        }
+
+        public bool CheckEnabled()
+        {
+            if (btnAction.Enabled == false && btnWhere.Enabled == false && btnWith.Enabled == false)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
