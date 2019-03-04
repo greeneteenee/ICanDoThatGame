@@ -28,6 +28,8 @@ namespace ICanDoThatGame
         Player currPlayer = null;
         //player1 turn
         bool turn;
+
+        int numTurns = 0;
         
 
         public void btnAction_Click(object sender, EventArgs e)
@@ -164,8 +166,19 @@ namespace ICanDoThatGame
 
         public void PlayerTurn(bool turn)
         {
+            numTurns += 1;
+
             p1ScoreLabel.Text = player1.PlayerScore.ToString();
             p2ScoreLabel.Text = player2.PlayerScore.ToString();
+
+            if (thisGame.OutOfTurns(numTurns) == true)
+            {
+                string winnerName = thisGame.CheckWinner(player1, player2);
+                MessageBox.Show($"Game over. {winnerName} wins!");
+                this.Close();
+            }
+
+            
             btnAction.Enabled = true;
             btnWhere.Enabled = true;
             btnWith.Enabled = true;
