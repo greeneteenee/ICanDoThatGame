@@ -9,7 +9,7 @@ namespace ICanDoThatGame
 {
     class Game
     {
-    
+        const int maxNumTurns = 10;
 
         public bool ChangeTurn(bool turn, Player currPlayer)
         {
@@ -35,7 +35,7 @@ namespace ICanDoThatGame
         /// <returns>Boolean</returns>
         public bool OutOfTurns(int numTurns)
         {
-            const int maxNumTurns = 10;
+            
             if (numTurns > maxNumTurns)
             {
                 return true;
@@ -43,6 +43,12 @@ namespace ICanDoThatGame
             return false;
         }
 
+        /// <summary>
+        /// This method checks which player won and returns the name of the player or the string "Nobody" if it was a tie
+        /// </summary>
+        /// <param name="p1">Player 1 object</param>
+        /// <param name="p2">Player 2 object</param>
+        /// <returns>string</returns>
         public string CheckWinner(Player p1, Player p2)
         {
             if (p1.PlayerScore > p2.PlayerScore)
@@ -58,6 +64,16 @@ namespace ICanDoThatGame
                 return "Nobody";
             }
 
+        }
+
+        /// <summary>
+        /// This method returns the number of turns left in the game
+        /// </summary>
+        /// <param name="numTurns">Number of turns played so far in game</param>
+        /// <returns>int</returns>
+        public int TurnsLeft(int numTurns)
+        {
+            return maxNumTurns - numTurns;            
         }
 
     }
