@@ -47,6 +47,8 @@
             this.p1Picture = new System.Windows.Forms.PictureBox();
             this.p1Panel = new System.Windows.Forms.FlowLayoutPanel();
             this.btnStartGame = new System.Windows.Forms.Button();
+            this.lblTurnLeftText = new System.Windows.Forms.Label();
+            this.lblTurnLeftInt = new System.Windows.Forms.Label();
             this.panelAction.SuspendLayout();
             this.panelWhere.SuspendLayout();
             this.panelWith.SuspendLayout();
@@ -277,11 +279,35 @@
             this.btnStartGame.UseVisualStyleBackColor = false;
             this.btnStartGame.Click += new System.EventHandler(this.btnStartGame_Click);
             // 
+            // lblTurnLeftText
+            // 
+            this.lblTurnLeftText.AutoSize = true;
+            this.lblTurnLeftText.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTurnLeftText.ForeColor = System.Drawing.Color.DimGray;
+            this.lblTurnLeftText.Location = new System.Drawing.Point(486, 12);
+            this.lblTurnLeftText.Name = "lblTurnLeftText";
+            this.lblTurnLeftText.Size = new System.Drawing.Size(87, 23);
+            this.lblTurnLeftText.TabIndex = 16;
+            this.lblTurnLeftText.Text = "Turns left:";
+            // 
+            // lblTurnLeftInt
+            // 
+            this.lblTurnLeftInt.AutoSize = true;
+            this.lblTurnLeftInt.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTurnLeftInt.ForeColor = System.Drawing.Color.DimGray;
+            this.lblTurnLeftInt.Location = new System.Drawing.Point(566, 12);
+            this.lblTurnLeftInt.Name = "lblTurnLeftInt";
+            this.lblTurnLeftInt.Size = new System.Drawing.Size(30, 23);
+            this.lblTurnLeftInt.TabIndex = 17;
+            this.lblTurnLeftInt.Text = "10";
+            // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1070, 450);
+            this.Controls.Add(this.lblTurnLeftInt);
+            this.Controls.Add(this.lblTurnLeftText);
             this.Controls.Add(this.btnStartGame);
             this.Controls.Add(this.p2ScoreLabel);
             this.Controls.Add(this.p1ScoreLabel);
@@ -299,6 +325,7 @@
             this.Controls.Add(this.p2Panel);
             this.Controls.Add(this.p1Panel);
             this.Name = "GameForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GameForm";
             this.Load += new System.EventHandler(this.GameForm_Load);
             this.panelAction.ResumeLayout(false);
@@ -332,5 +359,7 @@
         private System.Windows.Forms.PictureBox p1Picture;
         private System.Windows.Forms.FlowLayoutPanel p1Panel;
         private System.Windows.Forms.Button btnStartGame;
+        private System.Windows.Forms.Label lblTurnLeftText;
+        private System.Windows.Forms.Label lblTurnLeftInt;
     }
 }

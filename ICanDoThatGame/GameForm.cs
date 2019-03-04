@@ -167,9 +167,11 @@ namespace ICanDoThatGame
         public void PlayerTurn(bool turn)
         {
             numTurns += 1;
+            
 
             p1ScoreLabel.Text = player1.PlayerScore.ToString();
             p2ScoreLabel.Text = player2.PlayerScore.ToString();
+            
 
             if (thisGame.OutOfTurns(numTurns) == true)
             {
@@ -219,9 +221,9 @@ namespace ICanDoThatGame
                 p1ScoreLabel.ForeColor = Color.Gray;
 
             }
-           
 
-
+            int turnsLeft = thisGame.TurnsLeft(numTurns);
+            lblTurnLeftInt.Text = turnsLeft.ToString();
         }
 
         public bool CheckEnabled()
