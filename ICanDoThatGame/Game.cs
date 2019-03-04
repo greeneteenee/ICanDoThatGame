@@ -28,6 +28,37 @@ namespace ICanDoThatGame
 
         }
 
+        /// <summary>
+        /// This method returns true if there are no more turns left in the game, otherwise it returns false
+        /// </summary>
+        /// <param name="numTurns"></param>
+        /// <returns>Boolean</returns>
+        public bool OutOfTurns(int numTurns)
+        {
+            const int maxNumTurns = 10;
+            if (numTurns > maxNumTurns)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public string CheckWinner(Player p1, Player p2)
+        {
+            if (p1.PlayerScore > p2.PlayerScore)
+            {
+                return p1.PlayerName;
+            }
+            else if (p2.PlayerScore > p1.PlayerScore)
+            {
+                return p2.PlayerName;
+            }
+            else
+            {
+                return "Nobody";
+            }
+
+        }
 
     }
 }
