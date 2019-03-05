@@ -23,11 +23,11 @@ namespace ICanDoThatGame
         PrivateFontCollection pfc = new PrivateFontCollection();
 
         Game thisGame = new Game();
-        Player player1 = new Player();
-        Player player2 = new Player();
+        Player player1 = new Player("Thing 1");
+        Player player2 = new Player("Thing 2");
         Player currPlayer = null;
         //player1 turn
-        bool turn;
+        bool turn = false;
 
         int numTurns = 0;
         
@@ -153,15 +153,35 @@ namespace ICanDoThatGame
 
         private void btnStartGame_Click(object sender, EventArgs e)
         {
-            btnStartGame.Visible = false;
-            player1.PlayerName = "Thing 1";
-            player2.PlayerName = "Thing 2";
-            p1ScoreLabel.Text = player1.PlayerScore.ToString();
-            p2ScoreLabel.Text = player2.PlayerScore.ToString();
+            if (!PlayerNameValid(p1NameTextBox.Text, player1.MaxPlayerNameLength))
+            {
+                MessageBox.Show("Please enter player name");
+                btnStartGame.Enabled = false;
+            }
+            else if (!PlayerNameValid(p2NameTextBox.Text, player2.MaxPlayerNameLength))
+            {
+                MessageBox.Show("Please enter player name");
+                btnStartGame.Enabled = false;
+            }
+            else
+            {
+                btnStartGame.Visible = false;
 
-            turn = false;
-            
-            PlayerTurn(turn);
+                //players can't change their name after game starts
+                p1NameTextBox.Enabled = false;
+                p2NameTextBox.Enabled = false;
+
+                //set players names to what is in player TextBox's, defaults to "Thing 1" and "Thing 2"
+                player1.PlayerName = p1NameTextBox.Text;
+                player2.PlayerName = p2NameTextBox.Text;
+
+                //show player scores, starting with zero
+                p1ScoreLabel.Text = player1.PlayerScore.ToString();
+                p2ScoreLabel.Text = player2.PlayerScore.ToString();
+
+
+                PlayerTurn(turn);
+            }
         }
 
         public void PlayerTurn(bool turn)
@@ -261,6 +281,34 @@ namespace ICanDoThatGame
             btnAction.Font = new Font(pfc.Families[0], 36);
             btnWhere.Font = new Font(pfc.Families[0], 36);
             btnWith.Font = new Font(pfc.Families[0], 36);
+        }
+
+       
+        public bool PlayerNameValid(string name, int maxLength)
+        {
+            name.Trim();
+            if (string.IsNullOrEmpty(name))
+            {
+                return false;
+            }
+            else if (name.Length > maxLength)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        private void p1NameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            btnStartGame.Enabled = true;
+                       
+        }
+              
+
+        private void p2NameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            btnStartGame.Enabled = true;
+          
         }
     }
 }

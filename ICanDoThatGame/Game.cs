@@ -44,7 +44,7 @@ namespace ICanDoThatGame
         }
 
         /// <summary>
-        /// This method checks which player won and returns the name of the player or the string "Nobody" if it was a tie
+        /// This method checks which player won and returns the name of the player or the string "Everybody" if it was a tie
         /// </summary>
         /// <param name="p1">Player 1 object</param>
         /// <param name="p2">Player 2 object</param>
@@ -61,7 +61,7 @@ namespace ICanDoThatGame
             }
             else
             {
-                return "Nobody";
+                return "Everybody";
             }
 
         }

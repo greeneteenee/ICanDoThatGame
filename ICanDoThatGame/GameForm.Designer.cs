@@ -197,16 +197,16 @@
             // p2NameTextBox
             // 
             this.p2NameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.p2NameTextBox.Enabled = false;
             this.p2NameTextBox.Font = new System.Drawing.Font("Papyrus", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.p2NameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.p2NameTextBox.Location = new System.Drawing.Point(917, 154);
-            this.p2NameTextBox.Multiline = true;
+            this.p2NameTextBox.Location = new System.Drawing.Point(892, 154);
+            this.p2NameTextBox.MaxLength = 12;
             this.p2NameTextBox.Name = "p2NameTextBox";
-            this.p2NameTextBox.Size = new System.Drawing.Size(92, 36);
+            this.p2NameTextBox.Size = new System.Drawing.Size(137, 30);
             this.p2NameTextBox.TabIndex = 10;
             this.p2NameTextBox.Text = "Thing 2";
             this.p2NameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.p2NameTextBox.TextChanged += new System.EventHandler(this.p2NameTextBox_TextChanged);
             // 
             // p2ScoreLabel
             // 
@@ -236,16 +236,16 @@
             // p1NameTextBox
             // 
             this.p1NameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.p1NameTextBox.Enabled = false;
             this.p1NameTextBox.Font = new System.Drawing.Font("Papyrus", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.p1NameTextBox.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.p1NameTextBox.Location = new System.Drawing.Point(62, 154);
-            this.p1NameTextBox.Multiline = true;
+            this.p1NameTextBox.Location = new System.Drawing.Point(41, 154);
+            this.p1NameTextBox.MaxLength = 12;
             this.p1NameTextBox.Name = "p1NameTextBox";
-            this.p1NameTextBox.Size = new System.Drawing.Size(93, 36);
+            this.p1NameTextBox.Size = new System.Drawing.Size(137, 30);
             this.p1NameTextBox.TabIndex = 9;
             this.p1NameTextBox.Text = "Thing 1";
             this.p1NameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.p1NameTextBox.TextChanged += new System.EventHandler(this.p1NameTextBox_TextChanged);
             // 
             // p1Picture
             // 
