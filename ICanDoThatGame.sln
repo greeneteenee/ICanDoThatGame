@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICanDoThatGame", "ICanDoTha
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ICanDoThatDB", "ICanDoThatDB\ICanDoThatDB.sqlproj", "{DAFDC9C5-2398-4ECE-9F98-1C194E82EC29}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICanDoThatGameTests", "ICanDoThatGameTests\ICanDoThatGameTests.csproj", "{5EF2F289-8DE1-4E08-AB48-E85AD463A7FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{DAFDC9C5-2398-4ECE-9F98-1C194E82EC29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAFDC9C5-2398-4ECE-9F98-1C194E82EC29}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DAFDC9C5-2398-4ECE-9F98-1C194E82EC29}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{5EF2F289-8DE1-4E08-AB48-E85AD463A7FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EF2F289-8DE1-4E08-AB48-E85AD463A7FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EF2F289-8DE1-4E08-AB48-E85AD463A7FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EF2F289-8DE1-4E08-AB48-E85AD463A7FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
