@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace ICanDoThatGame
 {
-    class Game
+    public class Game
     {
         const int maxNumTurns = 10;
 
@@ -35,7 +35,7 @@ namespace ICanDoThatGame
         /// <returns>Boolean</returns>
         public bool OutOfTurns(int numTurns)
         {
-            
+            if (numTurns < 0) throw new ArgumentOutOfRangeException("Number of turns cannot be negative");
             if (numTurns > maxNumTurns)
             {
                 return true;
