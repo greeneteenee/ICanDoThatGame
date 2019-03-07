@@ -96,7 +96,7 @@ namespace ICanDoThatGame.Tests
             p1.UpdatePlayerScore(p1);
             p1.UpdatePlayerScore(p1);
             p1.UpdatePlayerScore(p1);
-           
+
 
             Player p2 = new Player("Thing 2");
             p2.PlayerName = "Thing 2";
@@ -126,7 +126,7 @@ namespace ICanDoThatGame.Tests
             p1.UpdatePlayerScore(p1);
             p1.UpdatePlayerScore(p1);
             p1.UpdatePlayerScore(p1);
-            
+
             Player p2 = new Player("Thing 2");
             p2.PlayerName = "Thing 2";
             p2.UpdatePlayerScore(p2);
@@ -140,6 +140,33 @@ namespace ICanDoThatGame.Tests
 
             //Assert
             Assert.AreEqual(result, expectedResponse);
+        }
+
+        [TestMethod()]
+        public void TurnsLeftMethod_TakesNumTurnsPlayed_ReturnsNumTurnsLeft()
+        {
+            //Arrange
+            int numTurns = 5;
+            int expectedResponse = 5;
+            Game game = new Game();
+
+            //Act
+            int result = game.TurnsLeft(numTurns);
+
+            //Assert
+            Assert.AreEqual(result, expectedResponse);
+        }
+
+        [TestMethod()]
+        public void TurnsLeftMethod_NegativeNumTurns_ThrowsArgumentOutofRangeException()
+        {
+            //Arrange
+            int numTurns = -1;
+            Game game = new Game();
+
+            //Assert => Act
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => game.TurnsLeft(numTurns));
+
         }
 
     }
