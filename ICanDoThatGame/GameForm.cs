@@ -153,12 +153,12 @@ namespace ICanDoThatGame
 
         private void btnStartGame_Click(object sender, EventArgs e)
         {
-            if (!PlayerNameValid(p1NameTextBox.Text, player1.MaxPlayerNameLength))
+            if (!player1.PlayerNameValid(p1NameTextBox.Text, player1.MaxPlayerNameLength))
             {
                 MessageBox.Show("Please enter player name");
                 btnStartGame.Enabled = false;
             }
-            else if (!PlayerNameValid(p2NameTextBox.Text, player2.MaxPlayerNameLength))
+            else if (!player2.PlayerNameValid(p2NameTextBox.Text, player2.MaxPlayerNameLength))
             {
                 MessageBox.Show("Please enter player name");
                 btnStartGame.Enabled = false;
@@ -284,19 +284,7 @@ namespace ICanDoThatGame
         }
 
        
-        public bool PlayerNameValid(string name, int maxLength)
-        {
-            name.Trim();
-            if (string.IsNullOrEmpty(name))
-            {
-                return false;
-            }
-            else if (name.Length > maxLength)
-            {
-                return false;
-            }
-            return true;
-        }
+   
 
         private void p1NameTextBox_TextChanged(object sender, EventArgs e)
         {

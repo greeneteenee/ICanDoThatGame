@@ -13,8 +13,8 @@ namespace ICanDoThatGame
         public Player(string name)
         {
             
-            if (string.IsNullOrWhiteSpace(name)) throw new ArgumentException("Player name cannot be blank. Please enter Player name");
-            if (string.IsNullOrEmpty(name)) throw new ArgumentException("Player name cannot be blank. Please enter Player name");
+            //if (string.IsNullOrWhiteSpace(name)) throw new ArgumentException("Player name cannot be blank. Please enter Player name");
+            //if (string.IsNullOrEmpty(name)) throw new ArgumentException("Player name cannot be blank. Please enter Player name");
             
 
         }
@@ -25,9 +25,39 @@ namespace ICanDoThatGame
         public int MaxPlayerNameLength { get; set; } = 12;
 
         //METHOD(S)
+       
+        /// <summary>
+        /// This method takes a Player object and adds 1 point to the player's score
+        /// </summary>
+        /// <param name="currPlayer"></param>
         public void UpdatePlayerScore(Player currPlayer)
         {
             currPlayer.PlayerScore += 1;
-        }              
+        }
+
+        /// <summary>
+        /// This method takes a player name (string) and makes sure it's not null, not empty, not whitespace and not longer than teh maximum allowed string length
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="maxLength"></param>
+        /// <returns>Returns true if player name (string) is valid, otherwise returns false</returns>
+        public bool PlayerNameValid(string name, int maxLength)
+        {
+            //name.Trim();
+            if (string.IsNullOrEmpty(name))
+            {
+                return false;
+            }
+            else if (string.IsNullOrWhiteSpace(name))
+            {
+                return false;
+            }
+            else if (name.Length > maxLength)
+            {
+                return false;
+            }
+            return true;
+        }
+
     }
 }
