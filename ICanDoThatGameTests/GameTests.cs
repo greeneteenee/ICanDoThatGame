@@ -15,14 +15,43 @@ namespace ICanDoThatGame.Tests
         public void OutOfTurnsTestMethod_NumTurnsLessThanMax_ReturnFalse()
         {
             //Arrange
-            int maxTurns = 10;
             int numTurns = 5;
+            bool expectedResponse = false;
+            Game game = new Game();
 
             //Act
-            if(numTurns < maxTurns)
-            {
-                bool result = true;
-            }
+            bool result = game.OutOfTurns(numTurns);
+
+            //Assert
+            Assert.AreEqual(result, expectedResponse);
+
+        }
+
+        [TestMethod()]
+        public void OutOfTurnsTestMethod_NumTurnGreaterThanMax_ReturnTrue()
+        {
+            //Arrange
+            int numTurns = 31;
+            bool expectedResponse = true;
+            Game game = new Game();
+
+            //Act
+            bool result = game.OutOfTurns(numTurns);
+
+            //Assert
+            Assert.AreEqual(result, expectedResponse);
+
+        }
+
+        [TestMethod()]
+        public void OutOfTurnsTestMethod_NegativeNumTurns_ThrowsArgumentOutofRangeException()
+        {
+            //Arrange
+            int numTurns = -1;
+            Game game = new Game();
+
+            //Assert => Act
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => game.OutOfTurns(numTurns));
 
         }
     }
