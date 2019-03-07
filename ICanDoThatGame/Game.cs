@@ -73,6 +73,7 @@ namespace ICanDoThatGame
         /// <returns>int</returns>
         public int TurnsLeft(int numTurns)
         {
+            if (numTurns < 0) throw new ArgumentOutOfRangeException("Number of turns cannot be negative");
             return maxNumTurns - numTurns;            
         }
 
