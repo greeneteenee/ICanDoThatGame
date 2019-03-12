@@ -153,6 +153,7 @@ namespace ICanDoThatGame
 
         private void btnStartGame_Click(object sender, EventArgs e)
         {
+            //if player names are not valid disable start button
             if (!player1.PlayerNameValid(p1NameTextBox.Text, player1.MaxPlayerNameLength))
             {
                 MessageBox.Show("Please enter player name");
@@ -165,7 +166,9 @@ namespace ICanDoThatGame
             }
             else
             {
+                //hide start button and show exit button when game starts
                 btnStartGame.Visible = false;
+                btnExitGame.Visible = true;
 
                 //players can't change their name after game starts
                 p1NameTextBox.Enabled = false;
@@ -174,33 +177,40 @@ namespace ICanDoThatGame
                 //set players names to what is in player TextBox's, defaults to "Thing 1" and "Thing 2"
                 player1.PlayerName = p1NameTextBox.Text;
                 player2.PlayerName = p2NameTextBox.Text;
-
-                //show player scores, starting with zero
-                p1ScoreLabel.Text = player1.PlayerScore.ToString();
-                p2ScoreLabel.Text = player2.PlayerScore.ToString();
-
-
+                                              
                 PlayerTurn(turn);
             }
         }
 
+        //re-enables start buttons if player attempts to correct name (i.e. changes text in player name TextBoxes)
+        private void p1NameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            btnStartGame.Enabled = true;
+        }
+        private void p2NameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            btnStartGame.Enabled = true;
+        }
+
         public void PlayerTurn(bool turn)
         {
-            numTurns += 1;
-            
 
+            //show player scores, starting with zero
             p1ScoreLabel.Text = player1.PlayerScore.ToString();
             p2ScoreLabel.Text = player2.PlayerScore.ToString();
-            
 
+            //increment what turn it is on each turn
+            numTurns += 1;            
+            
+            //if there's no more turns, show winner and exit game
             if (thisGame.OutOfTurns(numTurns) == true)
             {
                 string winnerName = thisGame.CheckWinner(player1, player2);
                 MessageBox.Show($"Game over. {winnerName} wins!");
                 this.Close();
             }
-
             
+            //reset game cards
             btnAction.Enabled = true;
             btnWhere.Enabled = true;
             btnWith.Enabled = true;
@@ -208,6 +218,7 @@ namespace ICanDoThatGame
             panelWhere.Visible = false;
             panelWith.Visible = false;
 
+            //decide who's turn it is
             if (turn == false)
             {
                 currPlayer = player1;
@@ -217,7 +228,7 @@ namespace ICanDoThatGame
                 currPlayer = player2;
             }
 
-            //if it is player1's turn, highlight player
+            //if it is player1's turn, highlight player1 on game form
             if (turn == false)
             {
                 p1Panel.Visible = true;               
@@ -229,7 +240,7 @@ namespace ICanDoThatGame
                 p2ScoreLabel.BackColor = Color.Empty;
                 p2ScoreLabel.ForeColor = Color.Gray;
             }
-            else
+            else //if it's player2's turn, highlight player 2 on game form
             {
                 p1Panel.Visible = false;
                 p2Panel.Visible = true;
@@ -241,11 +252,15 @@ namespace ICanDoThatGame
                 p1ScoreLabel.ForeColor = Color.Gray;
 
             }
-
+            // show number of turns left of game form
             int turnsLeft = thisGame.TurnsLeft(numTurns);
             lblTurnLeftInt.Text = turnsLeft.ToString();
         }
 
+        /// <summary>
+        /// This method checks if all the game card buttons are disabled (i.e. the button was pressed and the card was flipped over)
+        /// </summary>
+        /// <returns></returns>
         public bool CheckEnabled()
         {
             if (btnAction.Enabled == false && btnWhere.Enabled == false && btnWith.Enabled == false)
@@ -255,6 +270,9 @@ namespace ICanDoThatGame
             return false;
         }
 
+        /// <summary>
+        /// This method initializes a custom font for the game card buttons
+        /// </summary>
         public void CustomFontARCarter()
         {
           
@@ -275,28 +293,23 @@ namespace ICanDoThatGame
             pfc.AddMemoryFont(data, fontLength);
         }
 
+        /// <summary>
+        /// Font is applied to game card buttons when form loads
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GameForm_Load(object sender, EventArgs e)
         {
             CustomFontARCarter();
             btnAction.Font = new Font(pfc.Families[0], 36);
             btnWhere.Font = new Font(pfc.Families[0], 36);
             btnWith.Font = new Font(pfc.Families[0], 36);
-        }
-
-       
-   
-
-        private void p1NameTextBox_TextChanged(object sender, EventArgs e)
+        }  
+            
+        //Exit game
+        private void btnExitGame_Click(object sender, EventArgs e)
         {
-            btnStartGame.Enabled = true;
-                       
-        }
-              
-
-        private void p2NameTextBox_TextChanged(object sender, EventArgs e)
-        {
-            btnStartGame.Enabled = true;
-          
+            this.Close();
         }
     }
 }
