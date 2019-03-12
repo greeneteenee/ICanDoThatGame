@@ -49,6 +49,7 @@
             this.btnStartGame = new System.Windows.Forms.Button();
             this.lblTurnLeftText = new System.Windows.Forms.Label();
             this.lblTurnLeftInt = new System.Windows.Forms.Label();
+            this.btnExitGame = new System.Windows.Forms.Button();
             this.panelAction.SuspendLayout();
             this.panelWhere.SuspendLayout();
             this.panelWith.SuspendLayout();
@@ -301,11 +302,25 @@
             this.lblTurnLeftInt.TabIndex = 17;
             this.lblTurnLeftInt.Text = "10";
             // 
+            // btnExitGame
+            // 
+            this.btnExitGame.BackColor = System.Drawing.Color.White;
+            this.btnExitGame.Font = new System.Drawing.Font("Rockwell Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExitGame.Location = new System.Drawing.Point(880, 404);
+            this.btnExitGame.Name = "btnExitGame";
+            this.btnExitGame.Size = new System.Drawing.Size(181, 34);
+            this.btnExitGame.TabIndex = 18;
+            this.btnExitGame.Text = "EXIT";
+            this.btnExitGame.UseVisualStyleBackColor = false;
+            this.btnExitGame.Visible = false;
+            this.btnExitGame.Click += new System.EventHandler(this.btnExitGame_Click);
+            // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1070, 450);
+            this.Controls.Add(this.btnExitGame);
             this.Controls.Add(this.lblTurnLeftInt);
             this.Controls.Add(this.lblTurnLeftText);
             this.Controls.Add(this.btnStartGame);
@@ -361,5 +376,6 @@
         private System.Windows.Forms.Button btnStartGame;
         private System.Windows.Forms.Label lblTurnLeftText;
         private System.Windows.Forms.Label lblTurnLeftInt;
+        private System.Windows.Forms.Button btnExitGame;
     }
 }
