@@ -194,6 +194,7 @@
             this.p2Picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.p2Picture.TabIndex = 8;
             this.p2Picture.TabStop = false;
+            this.p2Picture.DoubleClick += new System.EventHandler(this.p2Picture_DoubleClick);
             // 
             // p2NameTextBox
             // 
@@ -257,6 +258,7 @@
             this.p1Picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.p1Picture.TabIndex = 7;
             this.p1Picture.TabStop = false;
+            this.p1Picture.DoubleClick += new System.EventHandler(this.p1Picture_DoubleClick);
             // 
             // p1Panel
             // 
