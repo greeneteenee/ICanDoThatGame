@@ -311,5 +311,32 @@ namespace ICanDoThatGame
         {
             this.Close();
         }
+
+        private void p1Picture_DoubleClick(object sender, EventArgs e)
+        {
+            ChangePlayerImg(p1Picture);
+        }
+
+        private void p2Picture_DoubleClick(object sender, EventArgs e)
+        {
+            ChangePlayerImg(p2Picture);
+        }
+
+        private void ChangePlayerImg(PictureBox pictureBox)
+        {
+            //enable user to select picture location
+            OpenFileDialog getImg = new OpenFileDialog();
+            getImg.Multiselect = false;//user can only open one file
+            getImg.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";//only image files should be selected
+            if (getImg.ShowDialog() == DialogResult.OK)
+            {
+                //get path of file
+                string filePath = getImg.FileName;
+                pictureBox.ImageLocation = filePath;
+
+            }
+        }
+
+        
     }
 }
