@@ -11,21 +11,9 @@ namespace ICanDoThatGame
     {
         const int maxNumTurns = 10;
 
-        public bool ChangeTurn(bool turn, Player currPlayer)
+        public bool ChangeTurn(bool turn)
         {
-            DialogResult dialogResult = MessageBox.Show($"Was {currPlayer.PlayerName} successful?", "", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                currPlayer.UpdatePlayerScore(currPlayer);
-                //MessageBox.Show(currPlayer.PlayerScore.ToString());
-                
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                //do nothing
-            }
             return turn = !turn;
-
         }
 
         /// <summary>

@@ -42,12 +42,12 @@ namespace ICanDoThatGame
             btnAction.Enabled = false;
             if(CheckEnabled() == true)
             {
-                turn = thisGame.ChangeTurn(turn, currPlayer);
-                PlayerTurn(turn);
+                ShowThumbsButtons();              
             }
-        
+
         }
 
+     
         private void btnWhere_Click(object sender, EventArgs e)
         {
             string randomWhere = WhereItemDB.GetRandomWhere();
@@ -57,8 +57,7 @@ namespace ICanDoThatGame
             btnWhere.Enabled = false;
             if (CheckEnabled() == true)
             {
-                turn = thisGame.ChangeTurn(turn, currPlayer);
-                PlayerTurn(turn);
+                ShowThumbsButtons();               
             }
         }
 
@@ -71,8 +70,23 @@ namespace ICanDoThatGame
             btnWith.Enabled = false;
             if (CheckEnabled() == true)
             {
-                turn = thisGame.ChangeTurn(turn, currPlayer);          
-                PlayerTurn(turn);
+                ShowThumbsButtons();               
+            }
+        }
+
+        private void ShowThumbsButtons()
+        {
+            if (turn == false)
+            {
+                p1SuccessText.Visible = true;
+                p1ThumbsDown.Visible = true;
+                p1ThumbsUp.Visible = true;
+            }
+            else
+            {
+                p2SuccessText.Visible = true;
+                p2ThumbsDown.Visible = true;
+                p2ThumbsUp.Visible = true;
             }
         }
 
@@ -85,71 +99,7 @@ namespace ICanDoThatGame
         {
             CustomizeGameForm customizeForm = new CustomizeGameForm();
             customizeForm.Show();
-        }
-
-        /// <summary>
-        /// This method increases player 1 score by one point when label is clicked
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void p1ScoreLabel_Click(object sender, EventArgs e)
-        {
-        //    p1ScoreLabel.Text = (Int32.Parse(p1ScoreLabel.Text) + 1).ToString();
-            
-        }
-
-        /// <summary>
-        /// This method increases player 2 score by one point when label is clicked
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void p2ScoreLabel_Click(object sender, EventArgs e)
-        {
-        //    p2ScoreLabel.Text = (Int32.Parse(p2ScoreLabel.Text)+1).ToString();
-        }
-
-        /// <summary>
-        /// This method asks player 1 if they want to descrease the score by one point (i.e. undo point increase) if label is right-clicked
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void p1ScoreLabel_MouseUp(object sender, MouseEventArgs e)
-        {
-        //    if (e.Button == MouseButtons.Right)
-        //    {
-        //        DialogResult dialogResult = MessageBox.Show("Do you want to undo point?", "Undo?", MessageBoxButtons.YesNo);
-        //        if (dialogResult == DialogResult.Yes)
-        //        {
-        //            p1ScoreLabel.Text = (Int32.Parse(p1ScoreLabel.Text) - 1).ToString();
-        //        }
-        //        else if (dialogResult == DialogResult.No)
-        //        {
-        //            //do nothing
-        //        }
-        //    }
-        }
-
-   
-        /// <summary>
-        /// This method asks player 2 if they want to descrease the score by one point (i.e. undo point increase) if label is right-clicked
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void p2ScoreLabel_MouseUp_1(object sender, MouseEventArgs e)
-        {
-        //    if (e.Button == MouseButtons.Right)
-        //    {
-        //        DialogResult dialogResult = MessageBox.Show("Do you want to undo point?", "Undo?", MessageBoxButtons.YesNo);
-        //        if (dialogResult == DialogResult.Yes)
-        //        {
-        //            p2ScoreLabel.Text = (Int32.Parse(p2ScoreLabel.Text) - 1).ToString();
-        //        }
-        //        else if (dialogResult == DialogResult.No)
-        //        {
-        //            //do nothing
-        //        }
-        //    }
-        }
+        }          
 
         private void btnStartGame_Click(object sender, EventArgs e)
         {
@@ -192,8 +142,52 @@ namespace ICanDoThatGame
             btnStartGame.Enabled = true;
         }
 
+       
+        private void p1ThumbsUp_Click(object sender, EventArgs e)
+        {
+            player1.UpdatePlayerScore(player1);
+            p1ScoreLabel.Text = player1.PlayerScore.ToString();
+            turn = thisGame.ChangeTurn(turn);
+            PlayerTurn(turn);
+            p1SuccessText.Visible = false;
+            p1ThumbsDown.Visible = false;
+            p1ThumbsUp.Visible = false;
+
+        }
+
+        private void p1ThumbsDown_Click(object sender, EventArgs e)
+        {
+            turn = thisGame.ChangeTurn(turn);
+            PlayerTurn(turn);
+            p1SuccessText.Visible = false;
+            p1ThumbsDown.Visible = false;
+            p1ThumbsUp.Visible = false;
+        }
+
+        private void p2ThumbsUp_Click(object sender, EventArgs e)
+        {
+            player2.UpdatePlayerScore(player2);
+            p2ScoreLabel.Text = player2.PlayerScore.ToString();
+            turn = thisGame.ChangeTurn(turn);
+            PlayerTurn(turn);
+            p2SuccessText.Visible = false;
+            p2ThumbsDown.Visible = false;
+            p2ThumbsUp.Visible = false;
+        }
+
+        private void p2ThumbsDown_Click(object sender, EventArgs e)
+        {
+                                
+            turn = thisGame.ChangeTurn(turn);
+            PlayerTurn(turn);
+            p2SuccessText.Visible = false;
+            p2ThumbsDown.Visible = false;
+            p2ThumbsUp.Visible = false;
+        }
+
         public void PlayerTurn(bool turn)
         {
+          
 
             //show player scores, starting with zero
             p1ScoreLabel.Text = player1.PlayerScore.ToString();
@@ -231,8 +225,9 @@ namespace ICanDoThatGame
             //if it is player1's turn, highlight player1 on game form
             if (turn == false)
             {
-                p1Panel.Visible = true;               
-                p2Panel.Visible = false;
+                p1panel.BackColor = Color.Black;               
+                p2panel.BackColor = Color.Transparent;
+                
                 p1NameTextBox.BackColor = Color.Black;
                 p2NameTextBox.BackColor = Color.Empty;
                 p1ScoreLabel.BackColor = Color.Black;
@@ -242,8 +237,8 @@ namespace ICanDoThatGame
             }
             else //if it's player2's turn, highlight player 2 on game form
             {
-                p1Panel.Visible = false;
-                p2Panel.Visible = true;
+                p1panel.BackColor = Color.Transparent;
+                p2panel.BackColor = Color.Black;
                 p2NameTextBox.BackColor = Color.Black;
                 p1NameTextBox.BackColor = Color.Empty;
                 p2ScoreLabel.BackColor = Color.Black;
@@ -252,9 +247,13 @@ namespace ICanDoThatGame
                 p1ScoreLabel.ForeColor = Color.Gray;
 
             }
+            
+
             // show number of turns left of game form
             int turnsLeft = thisGame.TurnsLeft(numTurns);
             lblTurnLeftInt.Text = turnsLeft.ToString();
+
+            
         }
 
         /// <summary>
@@ -337,6 +336,6 @@ namespace ICanDoThatGame
             }
         }
 
-        
+      
     }
 }

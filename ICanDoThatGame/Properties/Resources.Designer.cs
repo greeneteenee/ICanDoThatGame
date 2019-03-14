@@ -73,6 +73,66 @@ namespace ICanDoThatGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bad_157437_1280 {
+            get {
+                object obj = ResourceManager.GetObject("bad-157437_1280", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bluethumbsdown {
+            get {
+                object obj = ResourceManager.GetObject("bluethumbsdown", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bluethumbsdown__1_ {
+            get {
+                object obj = ResourceManager.GetObject("bluethumbsdown (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bluethumbsdown__2_ {
+            get {
+                object obj = ResourceManager.GetObject("bluethumbsdown (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bluethumbsdown1 {
+            get {
+                object obj = ResourceManager.GetObject("bluethumbsdown1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bluethumbsup {
+            get {
+                object obj = ResourceManager.GetObject("bluethumbsup", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cover_98637_1280 {
             get {
                 object obj = ResourceManager.GetObject("cover-98637_1280", resourceCulture);
@@ -86,6 +146,86 @@ namespace ICanDoThatGame.Properties {
         internal static System.Drawing.Bitmap cover_98637_1280_red {
             get {
                 object obj = ResourceManager.GetObject("cover-98637_1280_red", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap redthumbsdown {
+            get {
+                object obj = ResourceManager.GetObject("redthumbsdown", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap redthumbsdown1 {
+            get {
+                object obj = ResourceManager.GetObject("redthumbsdown1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap redthumbsdown2 {
+            get {
+                object obj = ResourceManager.GetObject("redthumbsdown2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap redthumbsdown3 {
+            get {
+                object obj = ResourceManager.GetObject("redthumbsdown3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap redthumbsdown4 {
+            get {
+                object obj = ResourceManager.GetObject("redthumbsdown4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap redthumbsup {
+            get {
+                object obj = ResourceManager.GetObject("redthumbsup", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap redthumbsup__1_ {
+            get {
+                object obj = ResourceManager.GetObject("redthumbsup (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap redthumbsup1 {
+            get {
+                object obj = ResourceManager.GetObject("redthumbsup1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
