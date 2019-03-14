@@ -118,13 +118,55 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="redthumbsup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\redthumbsup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="redthumbsdown1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\redthumbsdown1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ARCARTER" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ARCARTER.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="bluethumbsdown (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bluethumbsdown (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cover-98637_1280_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cover-98637_1280_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bluethumbsup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bluethumbsup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bluethumbsdown (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bluethumbsdown (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="redthumbsup1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\redthumbsup1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cover-98637_1280" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cover-98637_1280.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cover-98637_1280_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cover-98637_1280_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bluethumbsdown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bluethumbsdown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bluethumbsdown1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bluethumbsdown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="redthumbsdown3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\redthumbsdown2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="redthumbsup (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\redthumbsup (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="redthumbsdown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\redthumbsdown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bad-157437_1280" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bad-157437_1280.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="redthumbsdown2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\redthumbsdown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="redthumbsdown4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\redthumbsdown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

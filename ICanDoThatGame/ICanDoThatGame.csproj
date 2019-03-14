@@ -167,6 +167,11 @@
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="WhereItem.cs">
       <DependentUpon>ICanDoThatDBModel.tt</DependentUpon>
     </Compile>
@@ -185,14 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EntityDeploy Include="ICanDoThatDBModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ICanDoThatDBModel.Designer.cs</LastGenOutput>
@@ -225,6 +225,10 @@
       <DependentUpon>ICanDoThatDBModel.edmx</DependentUpon>
       <LastGenOutput>ICanDoThatDBModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\bluethumbsup.png" />
+    <None Include="Resources\bluethumbsdown.png" />
+    <None Include="Resources\redthumbsup.png" />
+    <None Include="Resources\redthumbsdown.png" />
     <None Include="Resources\cover-98637_1280_red.png" />
     <None Include="Resources\cover-98637_1280.png" />
     <None Include="Resources\ARCARTER.ttf" />

@@ -39,22 +39,34 @@
             this.panelWith = new System.Windows.Forms.FlowLayoutPanel();
             this.lblWith = new System.Windows.Forms.Label();
             this.p1ScoreLabel = new System.Windows.Forms.Label();
-            this.p2Picture = new System.Windows.Forms.PictureBox();
             this.p2NameTextBox = new System.Windows.Forms.TextBox();
-            this.p2ScoreLabel = new System.Windows.Forms.Label();
-            this.p2Panel = new System.Windows.Forms.FlowLayoutPanel();
             this.p1NameTextBox = new System.Windows.Forms.TextBox();
-            this.p1Picture = new System.Windows.Forms.PictureBox();
-            this.p1Panel = new System.Windows.Forms.FlowLayoutPanel();
             this.btnStartGame = new System.Windows.Forms.Button();
             this.lblTurnLeftText = new System.Windows.Forms.Label();
             this.lblTurnLeftInt = new System.Windows.Forms.Label();
             this.btnExitGame = new System.Windows.Forms.Button();
+            this.p1panel = new System.Windows.Forms.Panel();
+            this.p1SuccessText = new System.Windows.Forms.TextBox();
+            this.p2panel = new System.Windows.Forms.Panel();
+            this.p2SuccessText = new System.Windows.Forms.TextBox();
+            this.p2ScoreLabel = new System.Windows.Forms.Label();
+            this.p1Picture = new System.Windows.Forms.PictureBox();
+            this.p1ThumbsDown = new System.Windows.Forms.PictureBox();
+            this.p1ThumbsUp = new System.Windows.Forms.PictureBox();
+            this.p2ThumbsUp = new System.Windows.Forms.PictureBox();
+            this.p2Picture = new System.Windows.Forms.PictureBox();
+            this.p2ThumbsDown = new System.Windows.Forms.PictureBox();
             this.panelAction.SuspendLayout();
             this.panelWhere.SuspendLayout();
             this.panelWith.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.p2Picture)).BeginInit();
+            this.p1panel.SuspendLayout();
+            this.p2panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.p1Picture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p1ThumbsDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p1ThumbsUp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p2ThumbsUp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p2Picture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p2ThumbsDown)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAction
@@ -176,25 +188,12 @@
             this.p1ScoreLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.p1ScoreLabel.Font = new System.Drawing.Font("Papyrus", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.p1ScoreLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.p1ScoreLabel.Location = new System.Drawing.Point(86, 205);
+            this.p1ScoreLabel.Location = new System.Drawing.Point(71, 212);
             this.p1ScoreLabel.Name = "p1ScoreLabel";
             this.p1ScoreLabel.Size = new System.Drawing.Size(61, 76);
             this.p1ScoreLabel.TabIndex = 11;
             this.p1ScoreLabel.Text = "0";
             this.p1ScoreLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.p1ScoreLabel.Click += new System.EventHandler(this.p1ScoreLabel_Click);
-            this.p1ScoreLabel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.p1ScoreLabel_MouseUp);
-            // 
-            // p2Picture
-            // 
-            this.p2Picture.Image = global::ICanDoThatGame.Properties.Resources.cover_98637_1280_red;
-            this.p2Picture.Location = new System.Drawing.Point(892, 12);
-            this.p2Picture.Name = "p2Picture";
-            this.p2Picture.Size = new System.Drawing.Size(137, 126);
-            this.p2Picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.p2Picture.TabIndex = 8;
-            this.p2Picture.TabStop = false;
-            this.p2Picture.DoubleClick += new System.EventHandler(this.p2Picture_DoubleClick);
             // 
             // p2NameTextBox
             // 
@@ -210,31 +209,6 @@
             this.p2NameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.p2NameTextBox.TextChanged += new System.EventHandler(this.p2NameTextBox_TextChanged);
             // 
-            // p2ScoreLabel
-            // 
-            this.p2ScoreLabel.AutoSize = true;
-            this.p2ScoreLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.p2ScoreLabel.Font = new System.Drawing.Font("Papyrus", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.p2ScoreLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.p2ScoreLabel.Location = new System.Drawing.Point(943, 205);
-            this.p2ScoreLabel.Name = "p2ScoreLabel";
-            this.p2ScoreLabel.Size = new System.Drawing.Size(61, 76);
-            this.p2ScoreLabel.TabIndex = 12;
-            this.p2ScoreLabel.Text = "0";
-            this.p2ScoreLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.p2ScoreLabel.Click += new System.EventHandler(this.p2ScoreLabel_Click);
-            this.p2ScoreLabel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.p2ScoreLabel_MouseUp_1);
-            // 
-            // p2Panel
-            // 
-            this.p2Panel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.p2Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.p2Panel.Location = new System.Drawing.Point(861, 3);
-            this.p2Panel.Name = "p2Panel";
-            this.p2Panel.Size = new System.Drawing.Size(200, 288);
-            this.p2Panel.TabIndex = 13;
-            this.p2Panel.Visible = false;
-            // 
             // p1NameTextBox
             // 
             this.p1NameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -248,27 +222,6 @@
             this.p1NameTextBox.Text = "Thing 1";
             this.p1NameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.p1NameTextBox.TextChanged += new System.EventHandler(this.p1NameTextBox_TextChanged);
-            // 
-            // p1Picture
-            // 
-            this.p1Picture.Image = global::ICanDoThatGame.Properties.Resources.cover_98637_1280;
-            this.p1Picture.Location = new System.Drawing.Point(41, 12);
-            this.p1Picture.Name = "p1Picture";
-            this.p1Picture.Size = new System.Drawing.Size(137, 126);
-            this.p1Picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.p1Picture.TabIndex = 7;
-            this.p1Picture.TabStop = false;
-            this.p1Picture.DoubleClick += new System.EventHandler(this.p1Picture_DoubleClick);
-            // 
-            // p1Panel
-            // 
-            this.p1Panel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.p1Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.p1Panel.Location = new System.Drawing.Point(12, 3);
-            this.p1Panel.Name = "p1Panel";
-            this.p1Panel.Size = new System.Drawing.Size(200, 288);
-            this.p1Panel.TabIndex = 14;
-            this.p1Panel.Visible = false;
             // 
             // btnStartGame
             // 
@@ -317,21 +270,152 @@
             this.btnExitGame.Visible = false;
             this.btnExitGame.Click += new System.EventHandler(this.btnExitGame_Click);
             // 
+            // p1panel
+            // 
+            this.p1panel.BackColor = System.Drawing.Color.Black;
+            this.p1panel.Controls.Add(this.p1ThumbsDown);
+            this.p1panel.Controls.Add(this.p1ThumbsUp);
+            this.p1panel.Controls.Add(this.p1SuccessText);
+            this.p1panel.Controls.Add(this.p1ScoreLabel);
+            this.p1panel.Location = new System.Drawing.Point(12, 3);
+            this.p1panel.Name = "p1panel";
+            this.p1panel.Size = new System.Drawing.Size(200, 288);
+            this.p1panel.TabIndex = 19;
+            // 
+            // p1SuccessText
+            // 
+            this.p1SuccessText.BackColor = System.Drawing.Color.Black;
+            this.p1SuccessText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.p1SuccessText.Font = new System.Drawing.Font("Rockwell Condensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.p1SuccessText.ForeColor = System.Drawing.Color.White;
+            this.p1SuccessText.Location = new System.Drawing.Point(29, 196);
+            this.p1SuccessText.Name = "p1SuccessText";
+            this.p1SuccessText.Size = new System.Drawing.Size(137, 29);
+            this.p1SuccessText.TabIndex = 1;
+            this.p1SuccessText.Text = "Did you do it?";
+            this.p1SuccessText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.p1SuccessText.Visible = false;
+            // 
+            // p2panel
+            // 
+            this.p2panel.BackColor = System.Drawing.Color.Black;
+            this.p2panel.Controls.Add(this.p2ThumbsUp);
+            this.p2panel.Controls.Add(this.p2SuccessText);
+            this.p2panel.Controls.Add(this.p2ScoreLabel);
+            this.p2panel.Controls.Add(this.p2Picture);
+            this.p2panel.Controls.Add(this.p2ThumbsDown);
+            this.p2panel.Location = new System.Drawing.Point(861, 3);
+            this.p2panel.Name = "p2panel";
+            this.p2panel.Size = new System.Drawing.Size(200, 288);
+            this.p2panel.TabIndex = 20;
+            // 
+            // p2SuccessText
+            // 
+            this.p2SuccessText.BackColor = System.Drawing.Color.Black;
+            this.p2SuccessText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.p2SuccessText.Font = new System.Drawing.Font("Rockwell Condensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.p2SuccessText.ForeColor = System.Drawing.Color.White;
+            this.p2SuccessText.Location = new System.Drawing.Point(31, 196);
+            this.p2SuccessText.Name = "p2SuccessText";
+            this.p2SuccessText.Size = new System.Drawing.Size(137, 29);
+            this.p2SuccessText.TabIndex = 13;
+            this.p2SuccessText.Text = "Did you do it?";
+            this.p2SuccessText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.p2SuccessText.Visible = false;
+            // 
+            // p2ScoreLabel
+            // 
+            this.p2ScoreLabel.AutoSize = true;
+            this.p2ScoreLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.p2ScoreLabel.Font = new System.Drawing.Font("Papyrus", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.p2ScoreLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.p2ScoreLabel.Location = new System.Drawing.Point(77, 212);
+            this.p2ScoreLabel.Name = "p2ScoreLabel";
+            this.p2ScoreLabel.Size = new System.Drawing.Size(61, 76);
+            this.p2ScoreLabel.TabIndex = 25;
+            this.p2ScoreLabel.Text = "0";
+            this.p2ScoreLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // p1Picture
+            // 
+            this.p1Picture.Image = global::ICanDoThatGame.Properties.Resources.cover_98637_1280;
+            this.p1Picture.Location = new System.Drawing.Point(41, 12);
+            this.p1Picture.Name = "p1Picture";
+            this.p1Picture.Size = new System.Drawing.Size(137, 126);
+            this.p1Picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.p1Picture.TabIndex = 7;
+            this.p1Picture.TabStop = false;
+            this.p1Picture.DoubleClick += new System.EventHandler(this.p1Picture_DoubleClick);
+            // 
+            // p1ThumbsDown
+            // 
+            this.p1ThumbsDown.Image = global::ICanDoThatGame.Properties.Resources.bluethumbsdown;
+            this.p1ThumbsDown.InitialImage = global::ICanDoThatGame.Properties.Resources.redthumbsdown;
+            this.p1ThumbsDown.Location = new System.Drawing.Point(29, 227);
+            this.p1ThumbsDown.Name = "p1ThumbsDown";
+            this.p1ThumbsDown.Size = new System.Drawing.Size(40, 40);
+            this.p1ThumbsDown.TabIndex = 21;
+            this.p1ThumbsDown.TabStop = false;
+            this.p1ThumbsDown.Visible = false;
+            this.p1ThumbsDown.Click += new System.EventHandler(this.p1ThumbsDown_Click);
+            // 
+            // p1ThumbsUp
+            // 
+            this.p1ThumbsUp.Image = global::ICanDoThatGame.Properties.Resources.bluethumbsup;
+            this.p1ThumbsUp.Location = new System.Drawing.Point(129, 227);
+            this.p1ThumbsUp.Name = "p1ThumbsUp";
+            this.p1ThumbsUp.Size = new System.Drawing.Size(40, 40);
+            this.p1ThumbsUp.TabIndex = 22;
+            this.p1ThumbsUp.TabStop = false;
+            this.p1ThumbsUp.Visible = false;
+            this.p1ThumbsUp.Click += new System.EventHandler(this.p1ThumbsUp_Click);
+            // 
+            // p2ThumbsUp
+            // 
+            this.p2ThumbsUp.Image = global::ICanDoThatGame.Properties.Resources.redthumbsup;
+            this.p2ThumbsUp.InitialImage = global::ICanDoThatGame.Properties.Resources.redthumbsup;
+            this.p2ThumbsUp.Location = new System.Drawing.Point(130, 227);
+            this.p2ThumbsUp.Name = "p2ThumbsUp";
+            this.p2ThumbsUp.Size = new System.Drawing.Size(40, 40);
+            this.p2ThumbsUp.TabIndex = 23;
+            this.p2ThumbsUp.TabStop = false;
+            this.p2ThumbsUp.Visible = false;
+            this.p2ThumbsUp.Click += new System.EventHandler(this.p2ThumbsUp_Click);
+            // 
+            // p2Picture
+            // 
+            this.p2Picture.Image = global::ICanDoThatGame.Properties.Resources.cover_98637_1280_red;
+            this.p2Picture.Location = new System.Drawing.Point(31, 9);
+            this.p2Picture.Name = "p2Picture";
+            this.p2Picture.Size = new System.Drawing.Size(137, 126);
+            this.p2Picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.p2Picture.TabIndex = 24;
+            this.p2Picture.TabStop = false;
+            // 
+            // p2ThumbsDown
+            // 
+            this.p2ThumbsDown.Image = global::ICanDoThatGame.Properties.Resources.redthumbsdown;
+            this.p2ThumbsDown.InitialImage = global::ICanDoThatGame.Properties.Resources.redthumbsdown;
+            this.p2ThumbsDown.Location = new System.Drawing.Point(31, 227);
+            this.p2ThumbsDown.Name = "p2ThumbsDown";
+            this.p2ThumbsDown.Size = new System.Drawing.Size(40, 40);
+            this.p2ThumbsDown.TabIndex = 22;
+            this.p2ThumbsDown.TabStop = false;
+            this.p2ThumbsDown.Visible = false;
+            this.p2ThumbsDown.Click += new System.EventHandler(this.p2ThumbsDown_Click);
+            // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1070, 450);
+            this.Controls.Add(this.p1Picture);
             this.Controls.Add(this.btnExitGame);
             this.Controls.Add(this.lblTurnLeftInt);
             this.Controls.Add(this.lblTurnLeftText);
             this.Controls.Add(this.btnStartGame);
-            this.Controls.Add(this.p2ScoreLabel);
-            this.Controls.Add(this.p1ScoreLabel);
             this.Controls.Add(this.p2NameTextBox);
             this.Controls.Add(this.p1NameTextBox);
-            this.Controls.Add(this.p2Picture);
-            this.Controls.Add(this.p1Picture);
             this.Controls.Add(this.panelWith);
             this.Controls.Add(this.panelWhere);
             this.Controls.Add(this.panelAction);
@@ -339,8 +423,8 @@
             this.Controls.Add(this.btnWith);
             this.Controls.Add(this.btnWhere);
             this.Controls.Add(this.btnAction);
-            this.Controls.Add(this.p2Panel);
-            this.Controls.Add(this.p1Panel);
+            this.Controls.Add(this.p1panel);
+            this.Controls.Add(this.p2panel);
             this.Name = "GameForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GameForm";
@@ -348,8 +432,16 @@
             this.panelAction.ResumeLayout(false);
             this.panelWhere.ResumeLayout(false);
             this.panelWith.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.p2Picture)).EndInit();
+            this.p1panel.ResumeLayout(false);
+            this.p1panel.PerformLayout();
+            this.p2panel.ResumeLayout(false);
+            this.p2panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.p1Picture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p1ThumbsDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p1ThumbsUp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p2ThumbsUp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p2Picture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p2ThumbsDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -368,16 +460,22 @@
         private System.Windows.Forms.Label lblWhere;
         private System.Windows.Forms.Label lblWith;
         private System.Windows.Forms.Label p1ScoreLabel;
-        private System.Windows.Forms.PictureBox p2Picture;
         private System.Windows.Forms.TextBox p2NameTextBox;
-        private System.Windows.Forms.Label p2ScoreLabel;
-        private System.Windows.Forms.FlowLayoutPanel p2Panel;
         private System.Windows.Forms.TextBox p1NameTextBox;
-        private System.Windows.Forms.PictureBox p1Picture;
-        private System.Windows.Forms.FlowLayoutPanel p1Panel;
         private System.Windows.Forms.Button btnStartGame;
         private System.Windows.Forms.Label lblTurnLeftText;
         private System.Windows.Forms.Label lblTurnLeftInt;
         private System.Windows.Forms.Button btnExitGame;
+        private System.Windows.Forms.PictureBox p1Picture;
+        private System.Windows.Forms.Panel p1panel;
+        private System.Windows.Forms.PictureBox p1ThumbsUp;
+        private System.Windows.Forms.PictureBox p1ThumbsDown;
+        private System.Windows.Forms.TextBox p1SuccessText;
+        private System.Windows.Forms.Panel p2panel;
+        private System.Windows.Forms.TextBox p2SuccessText;
+        private System.Windows.Forms.PictureBox p2ThumbsDown;
+        private System.Windows.Forms.Label p2ScoreLabel;
+        private System.Windows.Forms.PictureBox p2Picture;
+        private System.Windows.Forms.PictureBox p2ThumbsUp;
     }
 }
