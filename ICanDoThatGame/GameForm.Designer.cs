@@ -46,27 +46,27 @@
             this.lblTurnLeftInt = new System.Windows.Forms.Label();
             this.btnExitGame = new System.Windows.Forms.Button();
             this.p1panel = new System.Windows.Forms.Panel();
-            this.p1SuccessText = new System.Windows.Forms.TextBox();
-            this.p2panel = new System.Windows.Forms.Panel();
-            this.p2SuccessText = new System.Windows.Forms.TextBox();
-            this.p2ScoreLabel = new System.Windows.Forms.Label();
-            this.p1Picture = new System.Windows.Forms.PictureBox();
             this.p1ThumbsDown = new System.Windows.Forms.PictureBox();
             this.p1ThumbsUp = new System.Windows.Forms.PictureBox();
+            this.p1SuccessText = new System.Windows.Forms.TextBox();
+            this.p2panel = new System.Windows.Forms.Panel();
             this.p2ThumbsUp = new System.Windows.Forms.PictureBox();
+            this.p2SuccessText = new System.Windows.Forms.TextBox();
+            this.p2ScoreLabel = new System.Windows.Forms.Label();
             this.p2Picture = new System.Windows.Forms.PictureBox();
             this.p2ThumbsDown = new System.Windows.Forms.PictureBox();
+            this.p1Picture = new System.Windows.Forms.PictureBox();
             this.panelAction.SuspendLayout();
             this.panelWhere.SuspendLayout();
             this.panelWith.SuspendLayout();
             this.p1panel.SuspendLayout();
-            this.p2panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.p1Picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p1ThumbsDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p1ThumbsUp)).BeginInit();
+            this.p2panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.p2ThumbsUp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p2Picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p2ThumbsDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p1Picture)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAction
@@ -282,6 +282,29 @@
             this.p1panel.Size = new System.Drawing.Size(200, 288);
             this.p1panel.TabIndex = 19;
             // 
+            // p1ThumbsDown
+            // 
+            this.p1ThumbsDown.Image = global::ICanDoThatGame.Properties.Resources.bluethumbsdown;
+            this.p1ThumbsDown.InitialImage = global::ICanDoThatGame.Properties.Resources.redthumbsdown;
+            this.p1ThumbsDown.Location = new System.Drawing.Point(29, 227);
+            this.p1ThumbsDown.Name = "p1ThumbsDown";
+            this.p1ThumbsDown.Size = new System.Drawing.Size(40, 40);
+            this.p1ThumbsDown.TabIndex = 21;
+            this.p1ThumbsDown.TabStop = false;
+            this.p1ThumbsDown.Visible = false;
+            this.p1ThumbsDown.Click += new System.EventHandler(this.p1ThumbsDown_Click);
+            // 
+            // p1ThumbsUp
+            // 
+            this.p1ThumbsUp.Image = global::ICanDoThatGame.Properties.Resources.bluethumbsup;
+            this.p1ThumbsUp.Location = new System.Drawing.Point(129, 227);
+            this.p1ThumbsUp.Name = "p1ThumbsUp";
+            this.p1ThumbsUp.Size = new System.Drawing.Size(40, 40);
+            this.p1ThumbsUp.TabIndex = 22;
+            this.p1ThumbsUp.TabStop = false;
+            this.p1ThumbsUp.Visible = false;
+            this.p1ThumbsUp.Click += new System.EventHandler(this.p1ThumbsUp_Click);
+            // 
             // p1SuccessText
             // 
             this.p1SuccessText.BackColor = System.Drawing.Color.Black;
@@ -308,6 +331,18 @@
             this.p2panel.Name = "p2panel";
             this.p2panel.Size = new System.Drawing.Size(200, 288);
             this.p2panel.TabIndex = 20;
+            // 
+            // p2ThumbsUp
+            // 
+            this.p2ThumbsUp.Image = global::ICanDoThatGame.Properties.Resources.redthumbsup;
+            this.p2ThumbsUp.InitialImage = global::ICanDoThatGame.Properties.Resources.redthumbsup;
+            this.p2ThumbsUp.Location = new System.Drawing.Point(130, 227);
+            this.p2ThumbsUp.Name = "p2ThumbsUp";
+            this.p2ThumbsUp.Size = new System.Drawing.Size(40, 40);
+            this.p2ThumbsUp.TabIndex = 23;
+            this.p2ThumbsUp.TabStop = false;
+            this.p2ThumbsUp.Visible = false;
+            this.p2ThumbsUp.Click += new System.EventHandler(this.p2ThumbsUp_Click);
             // 
             // p2SuccessText
             // 
@@ -336,52 +371,6 @@
             this.p2ScoreLabel.Text = "0";
             this.p2ScoreLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // p1Picture
-            // 
-            this.p1Picture.Image = global::ICanDoThatGame.Properties.Resources.cover_98637_1280;
-            this.p1Picture.Location = new System.Drawing.Point(41, 12);
-            this.p1Picture.Name = "p1Picture";
-            this.p1Picture.Size = new System.Drawing.Size(137, 126);
-            this.p1Picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.p1Picture.TabIndex = 7;
-            this.p1Picture.TabStop = false;
-            this.p1Picture.DoubleClick += new System.EventHandler(this.p1Picture_DoubleClick);
-            // 
-            // p1ThumbsDown
-            // 
-            this.p1ThumbsDown.Image = global::ICanDoThatGame.Properties.Resources.bluethumbsdown;
-            this.p1ThumbsDown.InitialImage = global::ICanDoThatGame.Properties.Resources.redthumbsdown;
-            this.p1ThumbsDown.Location = new System.Drawing.Point(29, 227);
-            this.p1ThumbsDown.Name = "p1ThumbsDown";
-            this.p1ThumbsDown.Size = new System.Drawing.Size(40, 40);
-            this.p1ThumbsDown.TabIndex = 21;
-            this.p1ThumbsDown.TabStop = false;
-            this.p1ThumbsDown.Visible = false;
-            this.p1ThumbsDown.Click += new System.EventHandler(this.p1ThumbsDown_Click);
-            // 
-            // p1ThumbsUp
-            // 
-            this.p1ThumbsUp.Image = global::ICanDoThatGame.Properties.Resources.bluethumbsup;
-            this.p1ThumbsUp.Location = new System.Drawing.Point(129, 227);
-            this.p1ThumbsUp.Name = "p1ThumbsUp";
-            this.p1ThumbsUp.Size = new System.Drawing.Size(40, 40);
-            this.p1ThumbsUp.TabIndex = 22;
-            this.p1ThumbsUp.TabStop = false;
-            this.p1ThumbsUp.Visible = false;
-            this.p1ThumbsUp.Click += new System.EventHandler(this.p1ThumbsUp_Click);
-            // 
-            // p2ThumbsUp
-            // 
-            this.p2ThumbsUp.Image = global::ICanDoThatGame.Properties.Resources.redthumbsup;
-            this.p2ThumbsUp.InitialImage = global::ICanDoThatGame.Properties.Resources.redthumbsup;
-            this.p2ThumbsUp.Location = new System.Drawing.Point(130, 227);
-            this.p2ThumbsUp.Name = "p2ThumbsUp";
-            this.p2ThumbsUp.Size = new System.Drawing.Size(40, 40);
-            this.p2ThumbsUp.TabIndex = 23;
-            this.p2ThumbsUp.TabStop = false;
-            this.p2ThumbsUp.Visible = false;
-            this.p2ThumbsUp.Click += new System.EventHandler(this.p2ThumbsUp_Click);
-            // 
             // p2Picture
             // 
             this.p2Picture.Image = global::ICanDoThatGame.Properties.Resources.cover_98637_1280_red;
@@ -403,6 +392,17 @@
             this.p2ThumbsDown.TabStop = false;
             this.p2ThumbsDown.Visible = false;
             this.p2ThumbsDown.Click += new System.EventHandler(this.p2ThumbsDown_Click);
+            // 
+            // p1Picture
+            // 
+            this.p1Picture.Image = global::ICanDoThatGame.Properties.Resources.cover_98637_1280;
+            this.p1Picture.Location = new System.Drawing.Point(41, 12);
+            this.p1Picture.Name = "p1Picture";
+            this.p1Picture.Size = new System.Drawing.Size(137, 126);
+            this.p1Picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.p1Picture.TabIndex = 7;
+            this.p1Picture.TabStop = false;
+            this.p1Picture.DoubleClick += new System.EventHandler(this.p1Picture_DoubleClick);
             // 
             // GameForm
             // 
@@ -434,14 +434,14 @@
             this.panelWith.ResumeLayout(false);
             this.p1panel.ResumeLayout(false);
             this.p1panel.PerformLayout();
-            this.p2panel.ResumeLayout(false);
-            this.p2panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.p1Picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.p1ThumbsDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.p1ThumbsUp)).EndInit();
+            this.p2panel.ResumeLayout(false);
+            this.p2panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.p2ThumbsUp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.p2Picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.p2ThumbsDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p1Picture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

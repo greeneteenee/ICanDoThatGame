@@ -142,6 +142,12 @@
     <Compile Include="CustomizeGameForm.Designer.cs">
       <DependentUpon>CustomizeGameForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DisplayWinnerScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayWinnerScreen.Designer.cs">
+      <DependentUpon>DisplayWinnerScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Game.cs" />
     <Compile Include="GameForm.cs">
       <SubType>Form</SubType>
@@ -184,6 +190,9 @@
     <Compile Include="WithItemPartial.cs" />
     <EmbeddedResource Include="CustomizeGameForm.resx">
       <DependentUpon>CustomizeGameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayWinnerScreen.resx">
+      <DependentUpon>DisplayWinnerScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GameForm.resx">
       <DependentUpon>GameForm.cs</DependentUpon>

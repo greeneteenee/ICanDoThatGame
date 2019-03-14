@@ -37,7 +37,6 @@ namespace ICanDoThatGame
     
             string randomAction = ActionItemDB.GetRandomAction();
             lblAction.Text = randomAction;
-            //MessageBox.Show(randomAction);
             panelAction.Visible = true;
             btnAction.Enabled = false;
             if(CheckEnabled() == true)
@@ -51,8 +50,7 @@ namespace ICanDoThatGame
         private void btnWhere_Click(object sender, EventArgs e)
         {
             string randomWhere = WhereItemDB.GetRandomWhere();
-            lblWhere.Text = randomWhere;
-            //MessageBox.Show(randomWhere);
+            lblWhere.Text = randomWhere;      
             panelWhere.Visible = true;
             btnWhere.Enabled = false;
             if (CheckEnabled() == true)
@@ -64,8 +62,7 @@ namespace ICanDoThatGame
         private void btnWith_Click(object sender, EventArgs e)
         {
             string randomWith = WithItemDB.GetRandomWith();
-            lblWith.Text = randomWith;
-            //MessageBox.Show(randomWith);
+            lblWith.Text = randomWith;            
             panelWith.Visible = true;
             btnWith.Enabled = false;
             if (CheckEnabled() == true)
@@ -188,7 +185,6 @@ namespace ICanDoThatGame
         public void PlayerTurn(bool turn)
         {
           
-
             //show player scores, starting with zero
             p1ScoreLabel.Text = player1.PlayerScore.ToString();
             p2ScoreLabel.Text = player2.PlayerScore.ToString();
@@ -200,8 +196,10 @@ namespace ICanDoThatGame
             if (thisGame.OutOfTurns(numTurns) == true)
             {
                 string winnerName = thisGame.CheckWinner(player1, player2);
-                MessageBox.Show($"Game over. {winnerName} wins!");
-                this.Close();
+                DisplayWinnerScreen winnerScreen = new DisplayWinnerScreen();
+                winnerScreen.Winner = winnerName;
+                winnerScreen.Show();               
+                this.Hide();
             }
             
             //reset game cards
@@ -252,7 +250,6 @@ namespace ICanDoThatGame
             // show number of turns left of game form
             int turnsLeft = thisGame.TurnsLeft(numTurns);
             lblTurnLeftInt.Text = turnsLeft.ToString();
-
             
         }
 
@@ -335,7 +332,6 @@ namespace ICanDoThatGame
 
             }
         }
-
       
     }
 }
