@@ -56,6 +56,7 @@
             this.p2Picture = new System.Windows.Forms.PictureBox();
             this.p2ThumbsDown = new System.Windows.Forms.PictureBox();
             this.p1Picture = new System.Windows.Forms.PictureBox();
+            this.btnDeleteActions = new System.Windows.Forms.Button();
             this.panelAction.SuspendLayout();
             this.panelWhere.SuspendLayout();
             this.panelWith.SuspendLayout();
@@ -261,7 +262,7 @@
             // 
             this.btnExitGame.BackColor = System.Drawing.Color.White;
             this.btnExitGame.Font = new System.Drawing.Font("Rockwell Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExitGame.Location = new System.Drawing.Point(880, 404);
+            this.btnExitGame.Location = new System.Drawing.Point(877, 404);
             this.btnExitGame.Name = "btnExitGame";
             this.btnExitGame.Size = new System.Drawing.Size(181, 34);
             this.btnExitGame.TabIndex = 18;
@@ -404,11 +405,22 @@
             this.p1Picture.TabStop = false;
             this.p1Picture.DoubleClick += new System.EventHandler(this.p1Picture_DoubleClick);
             // 
+            // btnDeleteActions
+            // 
+            this.btnDeleteActions.Location = new System.Drawing.Point(12, 404);
+            this.btnDeleteActions.Name = "btnDeleteActions";
+            this.btnDeleteActions.Size = new System.Drawing.Size(200, 34);
+            this.btnDeleteActions.TabIndex = 21;
+            this.btnDeleteActions.Text = "Delete Actions";
+            this.btnDeleteActions.UseVisualStyleBackColor = true;
+            this.btnDeleteActions.Click += new System.EventHandler(this.btnDeleteActions_Click);
+            // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1070, 450);
+            this.Controls.Add(this.btnDeleteActions);
             this.Controls.Add(this.p1Picture);
             this.Controls.Add(this.btnExitGame);
             this.Controls.Add(this.lblTurnLeftInt);
@@ -477,5 +489,6 @@
         private System.Windows.Forms.Label p2ScoreLabel;
         private System.Windows.Forms.PictureBox p2Picture;
         private System.Windows.Forms.PictureBox p2ThumbsUp;
+        private System.Windows.Forms.Button btnDeleteActions;
     }
 }

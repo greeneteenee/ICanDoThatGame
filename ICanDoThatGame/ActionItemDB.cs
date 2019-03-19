@@ -14,7 +14,7 @@ namespace ICanDoThatGame
         /// This method adds an action item to the Actionitems table (INSERT functionality)
         /// </summary>
         /// <param name="item"></param>
-        public static void AddActionItem(ActionItem item)
+        public static ActionItem AddActionItem(ActionItem item)
         {
 
             //database connection
@@ -24,7 +24,7 @@ namespace ICanDoThatGame
 
             db.SaveChanges();
 
-
+            return item;
         }
         
         /// <summary>
@@ -59,5 +59,13 @@ namespace ICanDoThatGame
 
         }
 
+        public static void DeleteAction(ActionItem a)
+        {
+            GameDB db = new GameDB();
+
+            db.ActionItems.Remove(a);
+
+            db.SaveChanges();
+        }
     }
 }
