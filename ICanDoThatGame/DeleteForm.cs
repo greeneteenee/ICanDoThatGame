@@ -33,9 +33,9 @@ namespace ICanDoThatGame
 
         private void btnDeleteAction_Click(object sender, EventArgs e)
         {
-            ActionItem deleteAction = new ActionItem();
+            ActionItem context = new ActionItem();
 
-            deleteAction.ActionDescription = comboBoxActions();
+            comboBoxActions.Items.RemoveAt(comboBoxActions.SelectedIndex);
         }
     }
 }
