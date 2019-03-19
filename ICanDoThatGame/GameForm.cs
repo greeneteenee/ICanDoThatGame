@@ -332,6 +332,11 @@ namespace ICanDoThatGame
 
             }
         }
-      
+
+        private void btnDeleteActions_Click(object sender, EventArgs e)
+        {
+            DeleteForm deleteform = new DeleteForm();
+            deleteform.Show();
+        }
     }
 }
