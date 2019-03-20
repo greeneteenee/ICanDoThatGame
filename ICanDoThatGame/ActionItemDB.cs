@@ -59,13 +59,32 @@ namespace ICanDoThatGame
 
         }
 
+        /// <summary>
+        /// This method deletes selected actions from the DB
+        /// </summary>
+        /// <param name="a"></param>
         public static void DeleteAction(ActionItem a)
         {
+            //database connection
             GameDB db = new GameDB();
 
+            //deletes action from db
             db.ActionItems.Remove(a);
 
+            //saves changes to db
             db.SaveChanges();
+        }
+
+        public static ActionItem Update(ActionItem a)
+        {
+            //database connection
+            GameDB db = new GameDB();
+
+            db.Entry(a).State = System.Data.Entity.EntityState.Modified;
+
+            db.SaveChanges();
+
+            return a;
         }
     }
 }

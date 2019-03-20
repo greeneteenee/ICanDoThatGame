@@ -22,6 +22,9 @@ namespace ICanDoThatGame
             this.Hide();
         }
 
+        /// <summary>
+        /// Populates the combo box with a list of action items in the DB
+        /// </summary>
         private void PopulateActionList()
         {
             List<ActionItem> actionsList = ActionItemDB.GetActionItems();
@@ -31,6 +34,11 @@ namespace ICanDoThatGame
             comboBoxActions.DisplayMember = nameof(ActionItem.ActionDescription);
         }
 
+        /// <summary>
+        /// This button will delete selected action item from the DB
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDeleteAction_Click(object sender, EventArgs e)
         {
             ActionItem context = new ActionItem();
