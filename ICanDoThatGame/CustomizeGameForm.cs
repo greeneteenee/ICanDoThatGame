@@ -23,11 +23,7 @@ namespace ICanDoThatGame
             string action = txtActionItem.Text;
             string place = txtWhereItem.Text;
             string challenge = txtWithItem.Text;
-
-            //to test add addAction code
-            //ActionItem addAction = new ActionItem();
-            //addAction.ActionDescription = "test1";   
-                    
+                                       
             //if txtActionTtem TextBox is not empty, add new Action to database
             if (!String.IsNullOrEmpty(action))
             {
@@ -35,6 +31,7 @@ namespace ICanDoThatGame
                 addAction.ActionDescription = action;
 
                 ActionItemDB.AddActionItem(addAction);
+                txtActionItem.Text = string.Empty;
                 MessageBox.Show("Action added successfully");
 
             }
@@ -46,6 +43,7 @@ namespace ICanDoThatGame
                 addWhere.WhereDescription = place;
 
                 WhereItemDB.AddWhereItem(addWhere);
+                txtWhereItem.Text = string.Empty;
                 MessageBox.Show("Place added successfully");
 
             }
@@ -57,10 +55,17 @@ namespace ICanDoThatGame
                 addWith.WithDescription = challenge;
 
                 WithItemDB.AddWithItem(addWith);
+                txtWithItem.Text = string.Empty;
                 MessageBox.Show("Challenge added successfully");
 
             }
+      
+        }
 
+        private void btnDeleteGameItems_Click(object sender, EventArgs e)
+        {
+            DeleteForm deleteform = new DeleteForm();
+            deleteform.Show();
         }
     }
 }
