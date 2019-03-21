@@ -19,19 +19,24 @@ namespace ICanDoThatGame
             InitializeComponent();
         }
 
-        //Create your private font collection object.
+        //Create your private font collection object
         PrivateFontCollection pfc = new PrivateFontCollection();
 
         Game thisGame = new Game();
         Player player1 = new Player("Thing 1");
         Player player2 = new Player("Thing 2");
         Player currPlayer = null;
+        
         //player1 turn
         bool turn = false;
 
         int numTurns = 0;
         
-
+        /// <summary>
+        /// Action game card is flipped when button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void btnAction_Click(object sender, EventArgs e)
         {
     
@@ -46,7 +51,11 @@ namespace ICanDoThatGame
 
         }
 
-     
+        /// <summary>
+        /// Place game card is flipped when button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnWhere_Click(object sender, EventArgs e)
         {
             string randomWhere = WhereItemDB.GetRandomWhere();
@@ -59,6 +68,11 @@ namespace ICanDoThatGame
             }
         }
 
+        /// <summary>
+        /// Challenge game card is flipped when button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnWith_Click(object sender, EventArgs e)
         {
             string randomWith = WithItemDB.GetRandomWith();
@@ -71,6 +85,9 @@ namespace ICanDoThatGame
             }
         }
 
+        /// <summary>
+        /// Displays thumbs up/down buttons for each players turn
+        /// </summary>
         private void ShowThumbsButtons()
         {
             if (turn == false)
@@ -139,7 +156,11 @@ namespace ICanDoThatGame
             btnStartGame.Enabled = true;
         }
 
-       
+        /// <summary>
+        /// When thumbs up button is clicked, player 1 score is increased, player turn is ended and thumbs up/down buttons are hidden
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void p1ThumbsUp_Click(object sender, EventArgs e)
         {
             player1.UpdatePlayerScore(player1);
@@ -152,6 +173,11 @@ namespace ICanDoThatGame
 
         }
 
+        /// <summary>
+        /// When thumbs down button is clicked, player 1 turn is ended and thumbs up/down buttons are hidden
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void p1ThumbsDown_Click(object sender, EventArgs e)
         {
             turn = thisGame.ChangeTurn(turn);
@@ -161,6 +187,11 @@ namespace ICanDoThatGame
             p1ThumbsUp.Visible = false;
         }
 
+        /// <summary>
+        /// When thumbs up button is clicked, player 2 score is increased, player turn is ended and thumbs up/down buttons are hidden
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void p2ThumbsUp_Click(object sender, EventArgs e)
         {
             player2.UpdatePlayerScore(player2);
@@ -172,6 +203,11 @@ namespace ICanDoThatGame
             p2ThumbsUp.Visible = false;
         }
 
+        /// <summary>
+        /// When thumbs down button is clicked, player 2 turn is ended and thumbs up/down buttons are hidden
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void p2ThumbsDown_Click(object sender, EventArgs e)
         {
                                 
@@ -182,6 +218,10 @@ namespace ICanDoThatGame
             p2ThumbsUp.Visible = false;
         }
 
+        /// <summary>
+        /// This method changes player turns
+        /// </summary>
+        /// <param name="turn"></param>
         public void PlayerTurn(bool turn)
         {
           
@@ -332,11 +372,6 @@ namespace ICanDoThatGame
 
             }
         }
-
-        private void btnDeleteActions_Click(object sender, EventArgs e)
-        {
-            DeleteForm deleteform = new DeleteForm();
-            deleteform.Show();
-        }
+      
     }
 }
